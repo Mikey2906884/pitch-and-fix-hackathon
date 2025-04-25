@@ -35,10 +35,8 @@
     display: flex;
   }
 
-  .newsletter input {
-    margin-bottom: 10px;
-  }
-
+  .newsletter input,
   .newsletter button {
+    margin-bottom: 10px;
   }
 }

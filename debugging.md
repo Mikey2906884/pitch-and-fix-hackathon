@@ -45,6 +45,21 @@
   - cart.html:171 product price div is missing closing tag
     - **_Fix:_** closed the div
 
+- <ins>CSS Bugs w/ Fixes:</ins>
+
+  - cart.css is saved as "cat.css"
+
+    - **_Fix:_** updated name to "cart.css"
+
+  - responsive.css contained empty ruleset for newsletter button
+
+    - **_Fix:_** removed empty ruleset
+
+  - responsive.css .newsletter input ruleset for mobile view is causing
+    mismatched box sizing between input and submit button
+    - **_Fix:_** added ".newletter button" to ruleset to ensure the button
+      receives the same sizing update as the input
+
 - <ins>JS Bugs w/ Fixes:</ins>
 
   - cart.js:addToCart() price variable redundancy
