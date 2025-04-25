@@ -21,6 +21,10 @@
     - **_Fix:_** corrected "fa-star-half-alt" to "fa-star-half" and moved half
       stars for Bluetooth Speakers to end of rating
 
+  - index.html has the links to the css files organized differently.
+
+    - **_Fix:_** Reorganized the links listed in the index.html to match the order of files within the css folder.
+
   - index.html:22-28 has ids instead of classes for nav items
 
     - **_Fix:_** changed id to class for each li tag
@@ -46,14 +50,23 @@
 
     - **_Fix:_** closed the div
 
-  - The product-detail.html line 16 needed the correct relative path in the src for the image.
+  - The product-detail.html has an unnecessary link in line 10 for css.
+
+    - **_Fix:_** Deleted the unnecessary link "../css/product-detail.css"
+
+  - The product-detail.html needed the correct relative path in the src for the image logo container.
+
     - **_Fix:_** the path in the src is now "../images/ShopEase-logo.svg"
 
+  - The product-detail.html element "input" at line 101 was not allowed to have attributes "min" and "max". I used the W3C Validator to check for coding errors.
+
+    - **_Fix:_** I deleted the attributes "min" and "max" from the element "input"
+
+  - The scripts found at the bottom of the product-detail.html were out of order. One of the closing tags was misspelled.
+
+    - **_Fix:_** I reorganized the scripts to match the order of the files within the js folder. I corrected the closing tag from "script src='../js/cart.js' /scrip" to "script src='../js/cart.js' /script"
+
 - <ins>CSS Bugs w/ Fixes:</ins>
-
-  - cart.css is saved as "cat.css"
-
-    - **_Fix:_** updated name to "cart.css"
 
   - responsive.css contained empty ruleset for newsletter button
 
@@ -77,4 +90,12 @@
     - **_Fix:_** added total increase functionality (and updated quantity
       increase to shorthand)
 
--
+- <ins>PITCH-AND-FIX-HACKATHON Bugs w/ Fixes:</ins>
+
+  - cart.css is saved as "cat.css". This does not properly link the stylessheet to the web page.
+
+    - **_Fix:_** updated name of file to "cart.css"
+
+  - products.html is saved as "product-detail.html". This does not properly link the information to the web page.
+
+    - **_Fix:_** updated name of file to "products.html"

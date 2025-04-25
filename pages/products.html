@@ -7,7 +7,6 @@
     <title>Product Detail - ShopEase</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/product-detail.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -98,7 +97,7 @@
                 <div class="quantity-controls">
                     <!-- Intentional bug: decrease button has incorrect id -->
                     <button id="decrease-qty" class="quantity-btn">-</button>
-                    <input type="text" id="quantity" value="1" min="1" max="10">
+                    <input type="text" id="quantity" value="1">
                     <button id="increase-quantity" class="quantity-btn">+</button>
                 </div>
             </div>
@@ -396,9 +395,8 @@
         </div>
     </footer>
 
-    <!-- Intentional bug: loading scripts in incorrect order -->
+    <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/product-detail.js"></script>
-    <script src="../js/cart.js"></script>
 </body>
 </html>
