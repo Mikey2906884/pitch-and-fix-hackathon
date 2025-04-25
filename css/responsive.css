@@ -35,7 +35,8 @@
     display: flex;
   }
 
-  .newsletter input {
+  .newsletter input,
+  .newsletter button {
     margin-bottom: 10px;
   }
 }
