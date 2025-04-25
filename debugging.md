@@ -43,7 +43,11 @@
     - **_Fix:_** closed the anchor
 
   - cart.html:171 product price div is missing closing tag
+
     - **_Fix:_** closed the div
+
+  - The product-detail.html line 16 needed the correct relative path in the src for the image.
+    - **_Fix:_** the path in the src is now "../images/ShopEase-logo.svg"
 
 - <ins>JS Bugs w/ Fixes:</ins>
 
@@ -57,3 +61,5 @@
 
     - **_Fix:_** added total increase functionality (and updated quantity
       increase to shorthand)
+
+-
