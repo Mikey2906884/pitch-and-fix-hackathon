@@ -18,24 +18,24 @@ function saveCart() {
 
 // Add product to cart
 function addToCart(productId, productName, productPrice) {
-  const price = productPrice;
-
   // Check if product already in cart
   const existingItem = cart.find((item) => item.id === productId);
 
   if (existingItem) {
-    // Increase quantity if already in cart
-    existingItem.quantity += 1;
+    // Increase quantity and update total if already in cart
+    existingItem.quantity++;
+    existingItem.total = (productPrice * existingItem.quantity).toFixed(2);
   } else {
     // Add new item to cart
     cart.push({
       id: productId,
       name: productName,
-      price: price,
+      price: productPrice,
       quantity: 1,
-      total: price,
+      total: productPrice,
     });
   }
+  console.log(cart);
 
   // Save cart and update UI
   saveCart();
