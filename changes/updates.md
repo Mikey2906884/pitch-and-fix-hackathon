@@ -1,0 +1,1 @@
+- updated product images directory and directory call outs in html pages

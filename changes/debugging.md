@@ -50,6 +50,7 @@
 
     - **_Fix:_** closed the div
 
+<<<<<<< HEAD:debugging.md
   - The products.html has an unnecessary link in line 10 for css.
 
     - **_Fix:_** Deleted the unnecessary link "../css/product-detail.css"
@@ -65,6 +66,29 @@
   - The scripts found at the bottom of the products.html were out of order. One of the closing tags was misspelled.
 
     - **_Fix:_** I reorganized the scripts to match the order of the files within the js folder. I corrected the closing tag from "script src='../js/cart.js' /scrip" to "script src='../js/cart.js' /script"
+=======
+  - product-detail.html:102 incorrect input type "text" is called out
+
+    - **_Fix:_** updated input type to "number"
+
+  - product-detail.html:278 review content div is missing closing tag
+
+    - **_Fix:_** closed the div
+
+  - product-detail.html:506 facebook social link missing closing anchor tag
+
+    - **_Fix:_** closed the anchor
+
+  - product-detail.html:19 and cart.html: 19 logo image link called out
+    incorrectly
+
+    - **_Fix:_** corrected the link
+
+  - product-detail.html:30 product anchor was not called out as active page to
+    match home page
+
+    - **_Fix:_** added "active" class to anchor tag
+>>>>>>> c70589dd9ed6216df9dca7a4677a5281f0bb3350:changes/debugging.md
 
 - <ins>CSS Bugs w/ Fixes:</ins>
 
