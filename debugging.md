@@ -6,6 +6,10 @@
     - Internet Explorer version meta tag
     - **_Fix:_** added meta tags to html files.
 
+  - All files incorrectly called out products.html in nav bar
+
+    - **_Fix:_** Updated to "product-detail.html"
+
   - All files have incorrect font awesome links
 
     - **_Fix:_** added correct links
@@ -43,7 +47,19 @@
     - **_Fix:_** closed the anchor
 
   - cart.html:171 product price div is missing closing tag
+
     - **_Fix:_** closed the div
+
+  - product-detail.html:102 incorrect input type "text" is called out
+
+    - **_Fix:_** updated input type to "number"
+
+  - product-detail.html:278 review content div is missing closing tag
+
+    - **_Fix:_** closed the div
+
+  - product-detail.html:506 facebook social link missing closing anchor tag
+    - **_Fix:_** closed the anchor
 
 - <ins>CSS Bugs w/ Fixes:</ins>
 
