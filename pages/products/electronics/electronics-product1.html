@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Product Detail - ShopEase</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/product-detail.css" />
+    <title>Wireless Headphones</title>
+    <link rel="stylesheet" href="/css/product-detail.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -16,19 +16,16 @@
   <body>
     <header>
       <div class="logo-container">
-        <img
-          src="../images/ShopEase-logo.svg"
-          alt="ShopEase Logo"
-          class="logo"
-        />
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
       </div>
       <nav class="main-nav">
         <ul id="nav-items">
-          <li class="nav-item"><a href="../index.html">Home</a></li>
-          <li class="nav-item"><a href="products.html">Products</a></li>
-          <li class="nav-item"><a href="categories.html">Categories</a></li>
-          <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/pages/categories/categories.html">Categories</a>
+          </li>
+          <li class="nav-item"><a href="/pages/about-us.html">About Us</a></li>
+          <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="cart-container">
@@ -94,7 +91,7 @@
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
-          <i class="fa fa-star-half-alt"></i>
+          <i class="fa fa-star-half"></i>
           <span class="rating-count">(42 reviews)</span>
         </div>
         <div class="product-price">
@@ -143,7 +140,9 @@
         <div class="quantity-selector">
           <h3>Quantity:</h3>
           <div class="quantity-controls">
-            <input type="number" id="quantity" value="0" min="0" max="10" />
+            <button id="decrease-quantity" class="quantity-btn">-</button>
+            <input type="number" id="quantity" value="1" min="1" max="10" />
+            <button id="increase-quantity" class="quantity-btn">+</button>
           </div>
         </div>
         <div class="purchase-actions">

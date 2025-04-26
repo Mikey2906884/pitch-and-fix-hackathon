@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Categories</title>
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <ul id="nav-items">
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/categories/categories.html" class="active">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about-us.html">About Us</a>
+          </li>
+          <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-container">
+        <div class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" style="display: none">
+          <div class="cart-items">
+            <!-- Cart items will be added here by JavaScript -->
+          </div>
+          <div class="cart-total">
+            <p>Total: $<span id="cart-total-amount">0.00</span></p>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+    <h2>Product Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="images/category1.jpg" alt="Electronics Category" />
+        <h3>Electronics</h3>
+        <a
+          href="../categories/category names/category-electronics.html"
+          class="category-link"
+          >View All</a
+        >
+      </div>
+      <div class="category-card">
+        <img src="images/category2.jpg" alt="Clothing Category" />
+        <h3>Clothing</h3>
+        <a
+          href="../categories/category names/category-clothing.html"
+          class="category-link"
+          >View All</a
+        >
+      </div>
+      <div class="category-card">
+        <img src="images/category3.jpg" alt="Home & Kitchen Category" />
+        <h3>Home & Kitchen</h3>
+        <a
+          href="../categories/category names/category-home-decor.html"
+          class="category-link"
+          >View All</a
+        >
+      </div>
+      <div class="category-card">
+        <img src="images/category4.jpg" alt="Sports & Outdoors Category" />
+        <h3>Sports & Outdoors</h3>
+        <a
+          href="../categories/category names/category-sports.html"
+          class="category-link"
+          >View All</a
+        >
+      </div>
+    </div>
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
