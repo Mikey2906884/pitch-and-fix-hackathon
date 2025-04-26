@@ -14,7 +14,7 @@
 
     - **_Fix:_** corrected "fas", "far", and "fab" to "fa"
 
-  - index.html and product-detail.html call out wrong name for font awesome half
+  - index.html and products.html call out wrong name for font awesome half
     stars, and each page did not have the half star at the end of the rating for
     Bluetooth Speaker
 
@@ -50,19 +50,19 @@
 
     - **_Fix:_** closed the div
 
-  - The product-detail.html has an unnecessary link in line 10 for css.
+  - The products.html has an unnecessary link in line 10 for css.
 
     - **_Fix:_** Deleted the unnecessary link "../css/product-detail.css"
 
-  - The product-detail.html needed the correct relative path in the src for the image logo container.
+  - The products.html needed the correct relative path in the src for the image logo container.
 
     - **_Fix:_** the path in the src is now "../images/ShopEase-logo.svg"
 
-  - The product-detail.html element "input" at line 101 was not allowed to have attributes "min" and "max". I used the W3C Validator to check for coding errors.
+  - The products.html element "input" at line 101 was not allowed to have attributes "min" and "max". I used the W3C Validator to check for coding errors.
 
     - **_Fix:_** I deleted the attributes "min" and "max" from the element "input"
 
-  - The scripts found at the bottom of the product-detail.html were out of order. One of the closing tags was misspelled.
+  - The scripts found at the bottom of the products.html were out of order. One of the closing tags was misspelled.
 
     - **_Fix:_** I reorganized the scripts to match the order of the files within the js folder. I corrected the closing tag from "script src='../js/cart.js' /scrip" to "script src='../js/cart.js' /script"
 
@@ -96,6 +96,6 @@
 
     - **_Fix:_** updated name of file to "cart.css"
 
-  - products.html is saved as "product-detail.html". This does not properly link the information to the web page.
+  - products.html is saved as "product-detail.html". This does not properly link the products.html page to the index.html page.
 
     - **_Fix:_** updated name of file to "products.html"
