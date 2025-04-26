@@ -50,45 +50,59 @@
 
     - **_Fix:_** closed the div
 
-<<<<<<< HEAD:debugging.md
-  - The products.html has an unnecessary link in line 10 for css.
-
-    - **_Fix:_** Deleted the unnecessary link "../css/product-detail.css"
-
   - The products.html needed the correct relative path in the src for the image logo container.
 
     - **_Fix:_** the path in the src is now "../images/ShopEase-logo.svg"
 
-  - The products.html element "input" at line 101 was not allowed to have attributes "min" and "max". I used the W3C Validator to check for coding errors.
-
-    - **_Fix:_** I deleted the attributes "min" and "max" from the element "input"
-
   - The scripts found at the bottom of the products.html were out of order. One of the closing tags was misspelled.
 
     - **_Fix:_** I reorganized the scripts to match the order of the files within the js folder. I corrected the closing tag from "script src='../js/cart.js' /scrip" to "script src='../js/cart.js' /script"
-=======
+
   - product-detail.html:102 incorrect input type "text" is called out
 
     - **_Fix:_** updated input type to "number"
 
-  - product-detail.html:278 review content div is missing closing tag
+  - products.html:145-147 Rewrote the div quantity controls
+
+    - **_Fix:_** Deleted the two buttons and set the "input" element's attribute "Value" to 0 and attribute "Min" to 0. The buttons were unnecessary, since you could increase and decrease the amount within the input area.
+
+  - products.html:157 This button was missing a data-product-price attribute
+
+    - **_Fix:_** added the attribute data-product-price and set it to $99.99
+
+  - products.html:186 The Reviews button was missing the data-tab attribute.
+
+    - **_Fix:_** added the data-tab attribute to this button and named it reviews
+
+  - products.html:212-241 The table was missing a table tag
+
+    - **_Fix:_** Moved all table rows and their corresponding headers and data inside of a table body.
+
+  - products.html:278 review content div is missing closing tag
 
     - **_Fix:_** closed the div
 
-  - product-detail.html:506 facebook social link missing closing anchor tag
+  - products.html:420-438 The product-card structure was needing to be corrected.
+
+    - **_Fix:_** Restructured the product-card for product2 to match the product-card structure of product3 and product4. Separated the product image and product details in their respective div tags. Changed the button to be an Add to Cart button with the respective attributes
+
+  - products.html:506 facebook social link missing closing anchor tag
 
     - **_Fix:_** closed the anchor
 
-  - product-detail.html:19 and cart.html: 19 logo image link called out
+  - products.html:19 and cart.html: 19 logo image link called out
     incorrectly
 
     - **_Fix:_** corrected the link
 
-  - product-detail.html:30 product anchor was not called out as active page to
+  - products.html:30 product anchor was not called out as active page to
     match home page
 
     - **_Fix:_** added "active" class to anchor tag
->>>>>>> c70589dd9ed6216df9dca7a4677a5281f0bb3350:changes/debugging.md
+
+  - products.html:541 The "../js/cart.js" script was typed twice inside products.html
+
+    - **_Fix:_** Deleted the second script. Made sure the structure of js scripts matched the alphabetical listing of the files inside the js folder.
 
 - <ins>CSS Bugs w/ Fixes:</ins>
 

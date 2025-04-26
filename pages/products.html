@@ -143,19 +143,16 @@
         <div class="quantity-selector">
           <h3>Quantity:</h3>
           <div class="quantity-controls">
-            <!-- Intentional bug: decrease button has incorrect id -->
-            <button id="decrease-qty" class="quantity-btn">-</button>
-            <input type="number" id="quantity" value="1" min="1" max="10" />
-            <button id="increase-quantity" class="quantity-btn">+</button>
+            <input type="number" id="quantity" value="0" min="0" max="10" />
           </div>
         </div>
         <div class="purchase-actions">
-          <!-- Intentional bug: missing data-product-price attribute -->
           <button
             id="add-to-cart"
             class="add-to-cart-btn"
             data-product-id="1"
             data-product-name="Wireless Headphones"
+            data-product-price="99.99"
           >
             Add to Cart
           </button>
@@ -178,14 +175,13 @@
 
     <section class="product-tabs">
       <div class="tabs-header">
-        <!-- Intentional bug: missing data-tab attribute on one tab -->
         <button class="tab-btn active" data-tab="description">
           Description
         </button>
         <button class="tab-btn" data-tab="specifications">
           Specifications
         </button>
-        <button class="tab-btn">Reviews</button>
+        <button class="tab-btn" data-tab="reviews">Reviews</button>
         <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
       </div>
       <div class="tabs-content">
@@ -211,35 +207,36 @@
         <div id="specifications" class="tab-content">
           <h2>Technical Specifications</h2>
           <table class="specs-table">
-            <tr>
-              <th>Driver Size</th>
-              <td>40mm</td>
-            </tr>
-            <tr>
-              <th>Frequency Response</th>
-              <td>20Hz - 20kHz</td>
-            </tr>
-            <tr>
-              <th>Impedance</th>
-              <td>32 Ohms</td>
-            </tr>
-            <tr>
-              <th>Bluetooth Version</th>
-              <td>5.0</td>
-            </tr>
-            <tr>
-              <th>Battery Life</th>
-              <td>30 hours (ANC on), 40 hours (ANC off)</td>
-            </tr>
-            <tr>
-              <th>Charging Time</th>
-              <td>2 hours</td>
-            </tr>
-            <tr>
-              <th>Weight</th>
-              <td>250g</td>
-            </tr>
-            <!-- Intentional bug: missing closing table tag -->
+            <tbody>
+              <tr>
+                <th>Driver Size</th>
+                <td>40mm</td>
+              </tr>
+              <tr>
+                <th>Frequency Response</th>
+                <td>20Hz - 20kHz</td>
+              </tr>
+              <tr>
+                <th>Impedance</th>
+                <td>32 Ohms</td>
+              </tr>
+              <tr>
+                <th>Bluetooth Version</th>
+                <td>5.0</td>
+              </tr>
+              <tr>
+                <th>Battery Life</th>
+                <td>30 hours (ANC on), 40 hours (ANC off)</td>
+              </tr>
+              <tr>
+                <th>Charging Time</th>
+                <td>2 hours</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>250g</td>
+              </tr>
+            </tbody>
           </table>
         </div>
         <div id="reviews" class="tab-content">
@@ -418,14 +415,25 @@
     <section class="related-products">
       <h2>You May Also Like</h2>
       <div class="product-grid">
-        <!-- Intentional bug: missing product card structure -->
         <div class="product-card">
-          <img src="../images/product2/product2.jpg" alt="Smart Watch" />
-          <h3>Smart Watch</h3>
-          <p class="price">$199.99</p>
-          <button class="quick-view-btn">Quick View</button>
+          <div class="product-image">
+            <img src="../images/product2/product2.jpg" alt="Smart Watch" />
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">Smart Watch</h3>
+            <div class="product-price">
+              <span class="current-price">$199.99</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="2"
+              data-product-name="Smart Watch"
+              data-product-price="$199.99"
+            >
+              Add to Cart
+            </button>
+          </div>
         </div>
-
         <div class="product-card">
           <div class="product-image">
             <img
@@ -448,7 +456,6 @@
             </button>
           </div>
         </div>
-
         <div class="product-card">
           <div class="product-image">
             <img src="../images/product4/product4.jpg" alt="Laptop Bag" />
@@ -531,6 +538,5 @@
     <script src="../js/cart.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/product-detail.js"></script>
-    <script src="../js/cart.js"></script>
   </body>
 </html>
