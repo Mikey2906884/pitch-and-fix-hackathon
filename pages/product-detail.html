@@ -16,13 +16,16 @@
   <body>
     <header>
       <div class="logo-container">
-        <!-- Intentional bug: incorrect relative path for the logo -->
-        <img src="images/logo.png" alt="ShopEase Logo" class="logo" />
+        <img
+          src="../images/ShopEase-logo.svg"
+          alt="ShopEase Logo"
+          class="logo"
+        />
       </div>
       <nav class="main-nav">
         <ul id="nav-items">
           <li class="nav-item"><a href="../index.html">Home</a></li>
-          <li class="nav-item"><a href="product-detail.html">Products</a></li>
+          <li class="nav-item"><a href="products.html">Products</a></li>
           <li class="nav-item"><a href="categories.html">Categories</a></li>
           <li class="nav-item"><a href="about.html">About Us</a></li>
           <li class="nav-item"><a href="contact.html">Contact</a></li>
@@ -51,32 +54,32 @@
           <!-- Intentional bug: image will be loaded through JavaScript but with incorrect selector -->
           <img
             id="main-product-img"
-            src="../images/product1.jpg"
+            src="../images/product1/product1.jpg"
             alt="Wireless Headphones"
           />
         </div>
         <div class="thumbnail-gallery">
           <!-- Intentional bug: onclick handlers using incorrect function names -->
           <img
-            src="../images/product1.jpg"
+            src="../images/product1/product1.jpg"
             alt="Wireless Headphones - Front"
             class="thumbnail active"
             onclick="changeMainImage(this)"
           />
           <img
-            src="../images/product1-side.jpg"
+            src="../images/product1/product1-side.jpg"
             alt="Wireless Headphones - Side"
             class="thumbnail"
             onclick="changeMainImage(this)"
           />
           <img
-            src="../images/product1-back.jpg"
+            src="../images/product1/product1-back.jpg"
             alt="Wireless Headphones - Back"
             class="thumbnail"
             onclick="changeMainImg(this)"
           />
           <img
-            src="../images/product1-case.jpg"
+            src="../images/product1/product1-case.jpg"
             alt="Wireless Headphones - Case"
             class="thumbnail"
             onclick="switchImage(this)"
@@ -417,7 +420,7 @@
       <div class="product-grid">
         <!-- Intentional bug: missing product card structure -->
         <div class="product-card">
-          <img src="../images/product2.jpg" alt="Smart Watch" />
+          <img src="../images/product2/product2.jpg" alt="Smart Watch" />
           <h3>Smart Watch</h3>
           <p class="price">$199.99</p>
           <button class="quick-view-btn">Quick View</button>
@@ -425,7 +428,10 @@
 
         <div class="product-card">
           <div class="product-image">
-            <img src="../images/product3.jpg" alt="Bluetooth Speaker" />
+            <img
+              src="../images/product3/product3.jpg"
+              alt="Bluetooth Speaker"
+            />
           </div>
           <div class="product-details">
             <h3 class="product-title">Bluetooth Speaker</h3>
@@ -445,7 +451,7 @@
 
         <div class="product-card">
           <div class="product-image">
-            <img src="../images/product4.jpg" alt="Laptop Bag" />
+            <img src="../images/product4/product4.jpg" alt="Laptop Bag" />
           </div>
           <div class="product-details">
             <h3 class="product-title">Laptop Bag</h3>

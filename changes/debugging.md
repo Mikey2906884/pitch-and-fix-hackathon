@@ -6,10 +6,6 @@
     - Internet Explorer version meta tag
     - **_Fix:_** added meta tags to html files.
 
-  - All files incorrectly called out products.html in nav bar
-
-    - **_Fix:_** Updated to "product-detail.html"
-
   - All files have incorrect font awesome links
 
     - **_Fix:_** added correct links
@@ -59,7 +55,18 @@
     - **_Fix:_** closed the div
 
   - product-detail.html:506 facebook social link missing closing anchor tag
+
     - **_Fix:_** closed the anchor
+
+  - product-detail.html:19 and cart.html: 19 logo image link called out
+    incorrectly
+
+    - **_Fix:_** corrected the link
+
+  - product-detail.html:30 product anchor was not called out as active page to
+    match home page
+
+    - **_Fix:_** added "active" class to anchor tag
 
 - <ins>CSS Bugs w/ Fixes:</ins>
 

@@ -51,7 +51,7 @@ function setupEventListeners() {
 function showMessage(message, type) {
   // Create message element
   const messageElement = document.createElement("div");
-  messageElement.className = `message ${type}`;
+  messageElement.classList = `message ${type}`;
   messageElement.textContent = message;
 
   // Add to body
