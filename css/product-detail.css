@@ -118,7 +118,7 @@
   z-index: 2;
 }
 
-.tab-content h2 {
+h2 {
   text-align: center;
 }
 
@@ -184,6 +184,8 @@
 
 .user-reviews {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
   padding-top: 2rem;
 }
@@ -195,6 +197,7 @@
   color: white;
   border-radius: 0.5rem;
   text-align: left;
+  max-width: 25rem;
 }
 
 .review-title {
