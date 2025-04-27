@@ -111,7 +111,9 @@ function setupTabNavigation() {
 // Change main product image when thumbnail is clicked
 function changeMainImage(thumbnail) {
   const mainImage = document.getElementById("main-product-img");
+  console.log(thumbnail);
   mainImage.src = thumbnail.src;
+  mainImage.alt = thumbnail.alt;
 
   // Update active class
   document.querySelectorAll(".thumbnail").forEach((thumb) => {

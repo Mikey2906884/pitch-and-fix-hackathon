@@ -48,38 +48,37 @@
     <main class="product-detail-container">
       <div class="product-images">
         <div class="main-image">
-          <!-- Intentional bug: image will be loaded through JavaScript but with incorrect selector -->
           <img
             id="main-product-img"
-            src="../images/product1/product1.jpg"
+            sizes=""
+            src="../../../images/product1/product1.jpg"
             alt="Wireless Headphones"
           />
         </div>
         <div class="thumbnail-gallery">
-          <!-- Intentional bug: onclick handlers using incorrect function names -->
           <img
-            src="../images/product1/product1.jpg"
+            src="../../../images/product1/product1.jpg"
             alt="Wireless Headphones - Front"
             class="thumbnail active"
-            onclick="changeMainImage(this)"
+            onmouseover="changeMainImage(this)"
           />
           <img
-            src="../images/product1/product1-side.jpg"
+            src="../../../images/product1/product1-side.jpg"
             alt="Wireless Headphones - Side"
             class="thumbnail"
-            onclick="changeMainImage(this)"
+            onmouseover="changeMainImage(this)"
           />
           <img
-            src="../images/product1/product1-back.jpg"
+            src="../../../images/product1/product1-back.jpg"
             alt="Wireless Headphones - Back"
             class="thumbnail"
-            onclick="changeMainImg(this)"
+            onmouseover="changeMainImage(this)"
           />
           <img
-            src="../images/product1/product1-case.jpg"
+            src="../../../images/product1/product1-case.jpg"
             alt="Wireless Headphones - Case"
             class="thumbnail"
-            onclick="switchImage(this)"
+            onmouseover="changeMainImage(this)"
           />
         </div>
       </div>
@@ -97,7 +96,7 @@
         <div class="product-price">
           <span class="original-price">$120.00</span>
           <span class="sale-price">$99.99</span>
-          <span class="discount-badge">Save 17%</span>
+          <span class="discount-badge">&nbsp;Save 17%</span>
         </div>
         <div class="product-description">
           <p>
@@ -130,7 +129,7 @@
                 style="background-color: #fff; border: 1px solid #ddd"
               ></div>
               <div
-                class="color-choice"
+                class="color-option"
                 data-color="blue"
                 style="background-color: #0078d4"
               ></div>
@@ -164,7 +163,7 @@
         <div class="product-meta">
           <p class="stock-status in-stock">In Stock</p>
           <p class="sku">SKU: WH-100-BLK</p>
-          <p class="categories">
+          <p class="category-list">
             Categories: <a href="categories.html#electronics">Electronics</a>,
             <a href="categories.html#audio">Audio</a>
           </p>
@@ -416,7 +415,10 @@
       <div class="product-grid">
         <div class="product-card">
           <div class="product-image">
-            <img src="../images/product2/product2.jpg" alt="Smart Watch" />
+            <img
+              src="../../../images/product2/product2.jpg"
+              alt="Smart Watch"
+            />
           </div>
           <div class="product-details">
             <h3 class="product-title">Smart Watch</h3>
@@ -436,7 +438,7 @@
         <div class="product-card">
           <div class="product-image">
             <img
-              src="../images/product3/product3.jpg"
+              src="../../../images/product3/product3.jpg"
               alt="Bluetooth Speaker"
             />
           </div>
@@ -457,7 +459,7 @@
         </div>
         <div class="product-card">
           <div class="product-image">
-            <img src="../images/product4/product4.jpg" alt="Laptop Bag" />
+            <img src="../../../images/product4/product4.jpg" alt="Laptop Bag" />
           </div>
           <div class="product-details">
             <h3 class="product-title">Laptop Bag</h3>
@@ -486,28 +488,28 @@
         <div class="footer-column">
           <h3>Shop</h3>
           <ul>
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="deals.html">Deals</a></li>
-            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="../../products.html">All Products</a></li>
+            <li><a href="../../categories/categories.html">Categories</a></li>
+            <li><a href="../../deals.html">Deals</a></li>
+            <li><a href="../../new-arrivals.html">New Arrivals</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Customer Service</h3>
           <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="shipping.html">Shipping & Returns</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="../../contact.html">Contact Us</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+            <li><a href="../../shipping.html">Shipping & Returns</a></li>
+            <li><a href="../../terms.html">Terms & Conditions</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>About Us</h3>
           <ul>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="partners.html">Partners</a></li>
+            <li><a href="../../about-us.html">Our Story</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../careers.html">Careers</a></li>
+            <li><a href="../../partners.html">Partners</a></li>
           </ul>
         </div>
         <div class="footer-column">
@@ -534,8 +536,8 @@
       </div>
     </footer>
 
-    <script src="../js/cart.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/product-detail.js"></script>
+    <script src="../../../js/cart.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/product-detail.js"></script>
   </body>
 </html>

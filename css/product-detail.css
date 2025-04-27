@@ -1,0 +1,97 @@
+.product-detail-container {
+  position: relative;
+  max-width: 80rem;
+  padding: 2rem;
+  display: flex;
+  margin: auto;
+  gap: 1rem;
+}
+
+.product-images,
+.thumbnail-gallery {
+  position: sticky;
+  top: 0.5rem;
+  height: fit-content;
+  display: flex;
+}
+
+.product-images {
+  flex-direction: row-reverse;
+  gap: 1rem;
+}
+
+.thumbnail-gallery {
+  width: 3rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.thumbnail {
+  border-radius: 0.2rem;
+}
+
+.main-image img {
+  width: 22rem;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.color-options {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.color-option {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: inline-flex;
+  margin-right: 0.5rem;
+}
+
+.product-tabs,
+.related-products {
+  padding: 2rem;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tabs-header {
+  height: 0.75rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.tab-btn {
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  cursor: pointer;
+  height: fit-content;
+  transition: all 0.3s ease-in-out;
+}
+
+.tab-btn.active {
+  background-color: #0078d4;
+  color: white;
+  padding-bottom: 1rem;
+}
+
+.related-products .product-grid {
+  grid-template-columns: repeat(3, 1fr);
+}

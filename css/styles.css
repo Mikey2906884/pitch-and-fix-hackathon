@@ -6,6 +6,11 @@
 }
 
 body {
+  width: 100vw;
+  max-width: 100rem;
+  display: block;
+  margin: auto;
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
   line-height: 1.6;
   color: #333;
@@ -93,6 +98,10 @@ header {
 .nav-item a.active,
 .nav-item a:hover {
   color: #0078d4;
+}
+
+ul {
+  padding-left: 2rem;
 }
 
 /* Cart */
@@ -267,6 +276,8 @@ header {
 }
 
 .product-details {
+  display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -427,6 +438,7 @@ footer {
 }
 
 .footer-column ul {
+  padding-left: 0;
   list-style: none;
 }
 
