@@ -1,6 +1,5 @@
 .product-detail-container {
   position: relative;
-  max-width: 80rem;
   padding: 2rem;
   display: flex;
   margin: auto;
@@ -41,8 +40,9 @@
 .product-info {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
+
 .color-options {
   display: flex;
   gap: 0.5rem;
@@ -56,6 +56,51 @@
   margin-right: 0.5rem;
 }
 
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.quantity-selector h3 {
+  margin-bottom: 0;
+}
+
+.quantity-selector button,
+.product-details-btn {
+  padding: 0.5rem 1rem;
+  background-color: #0078d4;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.quantity-selector input {
+  width: 3rem;
+  text-align: center;
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.quantity-selector input::-webkit-inner-spin-button,
+.quantity-selector input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-selector button:hover,
+.product-details-btn:hover {
+  background-color: #005a9e;
+}
+
+.purchase-actions {
+  display: flex;
+  gap: 1rem;
+}
+
 .product-tabs,
 .related-products {
   padding: 2rem;
@@ -67,6 +112,22 @@
 
 .tab-content.active {
   display: block;
+  height: 25rem;
+  overflow-y: scroll;
+  padding: 1rem;
+  z-index: 2;
+}
+
+.tab-content h2 {
+  text-align: center;
+}
+
+.tab-content h3 {
+  margin-bottom: 1rem;
+}
+
+.tab-content p {
+  text-align: justify;
 }
 
 .tabs-header {
@@ -90,6 +151,67 @@
   background-color: #0078d4;
   color: white;
   padding-bottom: 1rem;
+  z-index: 1;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.specs-table th {
+  background-color: #f0f0f0;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.specs-table td {
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+}
+
+.review-summary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.rating-breakdown {
+  display: flex;
+  gap: 1rem;
+}
+
+.user-reviews {
+  display: flex;
+  gap: 3rem;
+  padding-top: 2rem;
+}
+
+.review {
+  box-shadow: 0 0.5rem 1rem #00000080;
+  padding: 1rem;
+  background-color: #0078d4;
+  color: white;
+  border-radius: 0.5rem;
+  text-align: left;
+}
+
+.review-title {
+  font-weight: bold;
+}
+
+.review-content p {
+  text-align: left;
+}
+
+#shipping div {
+  padding-bottom: 2rem;
+}
+
+.fa-star,
+.fa-star-half {
+  color: #f39c12;
 }
 
 .related-products .product-grid {

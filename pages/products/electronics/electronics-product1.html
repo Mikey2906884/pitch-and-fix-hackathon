@@ -60,25 +60,25 @@
             src="../../../images/product1/product1.jpg"
             alt="Wireless Headphones - Front"
             class="thumbnail active"
-            onmouseover="changeMainImage(this)"
+            onclick="changeMainImage(this)"
           />
           <img
             src="../../../images/product1/product1-side.jpg"
             alt="Wireless Headphones - Side"
             class="thumbnail"
-            onmouseover="changeMainImage(this)"
+            onclick="changeMainImage(this)"
           />
           <img
             src="../../../images/product1/product1-back.jpg"
             alt="Wireless Headphones - Back"
             class="thumbnail"
-            onmouseover="changeMainImage(this)"
+            onclick="changeMainImage(this)"
           />
           <img
             src="../../../images/product1/product1-case.jpg"
             alt="Wireless Headphones - Case"
             class="thumbnail"
-            onmouseover="changeMainImage(this)"
+            onclick="changeMainImage(this)"
           />
         </div>
       </div>
@@ -147,15 +147,15 @@
         <div class="purchase-actions">
           <button
             id="add-to-cart"
-            class="add-to-cart-btn"
+            class="product-details-btn"
             data-product-id="1"
             data-product-name="Wireless Headphones"
             data-product-price="99.99"
           >
             Add to Cart
           </button>
-          <button id="buy-now" class="buy-now-btn">Buy Now</button>
-          <button id="add-to-wishlist" class="wishlist-btn">
+          <button id="buy-now" class="product-details-btn">Buy Now</button>
+          <button id="add-to-wishlist" class="product-details-btn">
             <i class="fa fa-heart"></i>
             <span>Add to Wishlist</span>
           </button>
@@ -391,6 +391,7 @@
               <li>Unused and in the same condition you received it</li>
               <li>Accompanied by the original receipt or proof of purchase</li>
             </ul>
+            <br />
             <p>
               Please note that shipping costs for returns are the responsibility
               of the customer unless the item was received damaged or we sent

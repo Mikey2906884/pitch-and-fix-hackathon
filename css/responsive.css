@@ -10,6 +10,19 @@
   .footer-columns {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .thumbnail-gallery {
+    width: 2rem;
+  }
+
+  .main-image img {
+    width: 12rem;
+  }
+
+  .quantity-selector button,
+  .product-details-btn {
+    padding: 0.5rem 0.75rem;
+  }
 }
 
 /* Mobile Styles */
