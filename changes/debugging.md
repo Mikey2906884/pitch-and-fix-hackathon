@@ -88,6 +88,10 @@
 
     - **_Fix:_** closed the div
 
+  - electronics-product1.html:407-410 missing contact information for warranty claims.
+
+    - **_Fix:_** created a paragraph for the use of a mailto: inside of an anchor tag.
+
   - electronics-product1.html:420-438 The product-card structure was needing to be corrected.
 
     - **_Fix:_** Restructured the product-card for product2 to match the product-card structure of product3 and product4. Separated the product image and product details in their respective div tags. Changed the button to be an Add to Cart button with the respective attributes
@@ -109,6 +113,10 @@
   - electronics-product1.html:541 The "../js/cart.js" script was typed twice inside electronics-product1.html
 
     - **_Fix:_** Deleted the second script. Made sure the structure of js scripts matched the alphabetical listing of the files inside the js folder.
+
+  - All html files that involve social media links in the footer are missing https:// links in the anchor tags.
+
+    - **_Fix:_** added login pages to the anchor tags for each corresponding social media platform.
 
 - <ins>CSS Bugs w/ Fixes:</ins>
 
