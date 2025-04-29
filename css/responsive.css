@@ -1,9 +1,9 @@
 /* Responsive Styles */
 
 /* Tablet Styles */
-@media screen and (max-width: 968px) {
-  .product-grid,
-  .category-grid {
+@media (min-width: 577px) and (max-width: 968px) {
+  .featured-products .product-grid,
+  .categories .category-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -26,7 +26,7 @@
 }
 
 /* Mobile Styles */
-@media screen and (max-width: 576px) {
+@media (max-width: 576px) {
   .hero h1 {
     font-size: 2rem;
   }
@@ -35,8 +35,8 @@
     font-size: 1rem;
   }
 
-  .product-grid,
-  .category-grid {
+  .featured-products .product-grid,
+  .categories .category-grid {
     grid-template-columns: 1fr;
   }
 
