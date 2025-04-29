@@ -31,8 +31,8 @@
 
 .main-image img {
   width: 22rem;
-  height: 100%;
-  object-fit: cover;
+  height: 33rem;
+  object-fit: contain;
   border-radius: 0.5rem;
   transition: all 0.3s ease-in-out;
 }
