@@ -60,7 +60,7 @@ function showMessage(message, type) {
   // Remove after 3 seconds
   setTimeout(() => {
     messageElement.remove();
-  });
+  }, 3000);
 }
 
 // Setup newsletter form
