@@ -55,7 +55,7 @@ function removeFromCart(productId) {
 
   if (itemIndex > -1) {
     // Remove item
-    cart.splice(itemIndex, 2);
+    cart.splice(itemIndex, 1);
 
     // Save cart and update UI
     saveCart();

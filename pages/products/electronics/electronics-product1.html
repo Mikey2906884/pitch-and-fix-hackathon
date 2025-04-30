@@ -19,6 +19,9 @@
         <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
       </div>
       <nav class="main-nav">
+        <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
+          &#x2630;
+        </button>
         <ul id="nav-items">
           <li class="nav-item"><a href="/index.html">Home</a></li>
           <li class="nav-item">
@@ -50,7 +53,6 @@
         <div class="main-image">
           <img
             id="main-product-img"
-            sizes=""
             src="../../../images/product1/product1.jpg"
             alt="Wireless Headphones"
           />
@@ -118,7 +120,7 @@
             <h3>Color:</h3>
             <div class="color-selector">
               <div
-                class="color-option"
+                class="color-option selected"
                 data-color="black"
                 style="background-color: black"
               ></div>
@@ -502,6 +504,8 @@
     </section>
 
     <section class="recently-viewed">
+      <h2>Recently Viewed Products</h2>
+      <div class="product-grid"></div>
       <!-- Intentional bug: empty section with no content -->
     </section>
 
