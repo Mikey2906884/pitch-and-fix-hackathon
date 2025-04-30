@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Smart Watch</title>
+    <link rel="stylesheet" href="/css/product-detail.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <ul id="nav-items">
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/pages/categories/categories.html">Categories</a>
+          </li>
+          <li class="nav-item"><a href="/pages/about-us.html">About Us</a></li>
+          <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-container">
+        <div class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" style="display: none">
+          <div class="cart-items">
+            <!-- Cart items will be added here by JavaScript -->
+          </div>
+          <div class="cart-total">
+            <p>Total: $<span id="cart-total-amount">0.00</span></p>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="product-detail-container">
+      <div class="product-images">
+        <div class="main-image">
+          <img
+            id="main-product-img"
+            sizes=""
+            src="../../../images/product4/product4.jpg"
+            alt="Laptop Bag"
+          />
+        </div>
+        <div class="thumbnail-gallery">
+          <img
+            src="../../../images/product4/product4.jpg"
+            alt="Laptop Bag - Front"
+            class="thumbnail active"
+            onclick="changeMainImage(this)"
+          />
+          <img
+            src="../../../images/product4/product4-side.jpg"
+            alt="Laptop Bag - Side"
+            class="thumbnail"
+            onclick="changeMainImage(this)"
+          />
+          <img
+            src="../../../images/product4/product4-back.jpg"
+            alt="Laptop Bag - Back"
+            class="thumbnail"
+            onclick="changeMainImage(this)"
+          />
+          <img
+            src="../../../images/product4/product4-case.jpg"
+            alt="Laptop Bag - Case"
+            class="thumbnail"
+            onclick="changeMainImage(this)"
+          />
+        </div>
+      </div>
+
+      <div class="product-info">
+        <h1 class="product-title">Laptop Bag</h1>
+        <div class="product-rating">
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <i class="fa fa-star"></i>
+          <span class="rating-count">(35 reviews)</span>
+        </div>
+        <div class="product-price">
+          <span class="sale-price">$49.99</span>
+        </div>
+        <div class="product-description">
+          <p>
+            Complete your fashionable look with our handcrafted leather Laptop
+            Bag. The strap comes with a comfortable shoulder pad and holds all
+            of your important technology and documents.
+          </p>
+          <ul class="features-list">
+            <li>Handcrafted Leather</li>
+            <li>Carrying Strap comes with a slidable Shoulder Pad</li>
+            <li>Pockets inside the main compartment</li>
+          </ul>
+        </div>
+        <div class="product-variants">
+          <div class="color-options">
+            <h3>Color:</h3>
+            <div class="color-selector">
+              <div
+                class="color-option"
+                data-color="brown"
+                style="background-color: #8b4513"
+              ></div>
+              <div
+                class="color-option"
+                data-color="charcoal black"
+                style="background-color: #080808"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div class="quantity-selector">
+          <h3>Quantity:</h3>
+          <div class="quantity-controls">
+            <button id="decrease-quantity" class="quantity-btn">-</button>
+            <input type="number" id="quantity" value="1" min="1" max="10" />
+            <button id="increase-quantity" class="quantity-btn">+</button>
+          </div>
+        </div>
+        <div class="purchase-actions">
+          <button
+            id="add-to-cart"
+            class="product-details-btn"
+            data-product-id="4"
+            data-product-name="Laptop Bag"
+            data-product-price="49.99"
+          >
+            Add to Cart
+          </button>
+          <button id="buy-now" class="product-details-btn">Buy Now</button>
+          <button id="add-to-wishlist" class="product-details-btn">
+            <i class="fa fa-heart"></i>
+            <span>Add to Wishlist</span>
+          </button>
+        </div>
+        <div class="product-meta">
+          <p class="stock-status in-stock">In Stock</p>
+          <p class="sku">SKU: BR-050-BLK</p>
+          <p class="category-list">
+            Categories: <a href="categories.html#electronics">Electronics</a>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <section class="product-tabs">
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="description">
+          Description
+        </button>
+        <button class="tab-btn" data-tab="specifications">
+          Specifications
+        </button>
+        <button class="tab-btn" data-tab="reviews">Reviews</button>
+        <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+      </div>
+      <div class="tabs-content">
+        <div id="description" class="tab-content active">
+          <h2>Product Description</h2>
+          <p>
+            Our Laptop Bag is made with handcrafted leather. From the strap to
+            the bag itself, the leather is soft and durable. We know you'll love
+            getting to use this bag for years to come.
+          </p>
+          <p>
+            The inside of the bag is lined with a silky material that is gentle
+            on your devices and paperwork. The main compartment has different
+            sized pockets to keep everything organized just how you like it.
+          </p>
+        </div>
+        <div id="specifications" class="tab-content">
+          <h2>Technical Specifications</h2>
+          <table class="specs-table">
+            <tbody>
+              <tr>
+                <th>Compartments</th>
+                <td>Laptop/Main</td>
+                <td>Varying Sized Pockets</td>
+              </tr>
+              <tr>
+                <th>Interior Lining Material</th>
+                <td>Rayon</td>
+              </tr>
+              <tr>
+                <th>Dimensions</th>
+                <td>300 X 105 X 410 mm Expanded</td>
+                <td>300 X 85 X 410 mm Not Expanded</td>
+              </tr>
+              <tr>
+                <th>Weight</th>
+                <td>1 kg</td>
+              </tr>
+              <tr>
+                <th>Closing System</th>
+                <td>Dual Zippers</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="reviews" class="tab-content">
+          <h2>Customer Reviews</h2>
+          <div class="review-summary">
+            <div class="average-rating">
+              <span class="rating-number">5</span>
+              <div class="stars">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <span class="total-reviews">Based on 35 reviews</span>
+            </div>
+            <div class="rating-breakdown">
+              <div class="rating-bar">
+                <span class="rating-level">5 Star</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 92%"></div>
+                </div>
+                <span class="rating-percent">92%</span>
+              </div>
+              <div class="rating-bar">
+                <span class="rating-level">4 Star</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 5%"></div>
+                </div>
+                <span class="rating-percent">5%</span>
+              </div>
+              <div class="rating-bar">
+                <span class="rating-level">3 Star</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 3%"></div>
+                </div>
+                <span class="rating-percent">3%</span>
+              </div>
+              <div class="rating-bar">
+                <span class="rating-level">2 Star</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 0%"></div>
+                </div>
+                <span class="rating-percent">0%</span>
+              </div>
+              <div class="rating-bar">
+                <span class="rating-level">1 Star</span>
+                <div class="progress-bar">
+                  <div class="progress" style="width: 0%"></div>
+                </div>
+                <span class="rating-percent">0%</span>
+              </div>
+            </div>
+          </div>
+          <div class="user-reviews">
+            <div class="review">
+              <div class="review-header">
+                <div class="reviewer-name">Gio Savage</div>
+                <div class="review-date">August 17, 2024</div>
+              </div>
+              <div class="review-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="review-title">Perfect for Modeling</div>
+              <div class="review-content">
+                <p>
+                  I've got to rate this laptop bag 5 stars. I bought it about a
+                  month ago, and it has already helped me land a huge modeling
+                  gig for men's fashion. I also just love the way it looks and
+                  feels. Thank you ShopEase!
+                </p>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <div class="reviewer-name">Russ Rapp</div>
+                <div class="review-date">February 10, 2024</div>
+              </div>
+              <div class="review-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="review-title">Compartmentability</div>
+              <div class="review-content">
+                <p>
+                  The thing that made me buy this wonderful bag was the fact
+                  that I could hold all of my work items in one place. My
+                  laptop, my phone, my Ipad, the chargers to each device, and
+                  some important documents. Plus, the inside isn't rough, so
+                  there's no scratching on my equipment :)
+                </p>
+              </div>
+            </div>
+            <!-- Intentional bug: missing closing div for review -->
+            <div class="review">
+              <div class="review-header">
+                <div class="reviewer-name">Summore Onn</div>
+                <div class="review-date">May 5, 2025</div>
+              </div>
+              <div class="review-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="review-title">Thin Padding in Shoulder Pad >:(</div>
+              <div class="review-content">
+                <p>
+                  A great friend of mine, Stu, recommended this bag for me. I
+                  absolutely love the bag itself, but the shoulder pad on the
+                  strap is just too thin. I've emailed HR about putting more
+                  padding in there, but they haven't gotten back to me yet.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="shipping" class="tab-content">
+          <h2>Shipping & Returns</h2>
+          <div class="shipping-info">
+            <h3>Shipping Information</h3>
+            <p>
+              We offer free standard shipping on all orders over $50. Orders
+              typically ship within 1-2 business days of ordering. Delivery
+              times vary by location:
+            </p>
+            <ul>
+              <li>
+                Standard Shipping (Free for orders over $50): 3-5 business days
+              </li>
+              <li>Express Shipping ($10): 2-3 business days</li>
+              <li>
+                Next Day Shipping ($20): 1 business day (order must be placed
+                before 2pm EST)
+              </li>
+            </ul>
+          </div>
+          <div class="returns-info">
+            <h3>Return Policy</h3>
+            <p>
+              We want you to be completely satisfied with your purchase. If
+              you're not happy with your item, you may return it within 30 days
+              of delivery for a full refund or exchange.
+            </p>
+            <p>To be eligible for a return, the item must be:</p>
+            <ul>
+              <li>In the original packaging</li>
+              <li>Unused and in the same condition you received it</li>
+              <li>Accompanied by the original receipt or proof of purchase</li>
+            </ul>
+            <br />
+            <p>
+              Please note that shipping costs for returns are the responsibility
+              of the customer unless the item was received damaged or we sent
+              the wrong item.
+            </p>
+          </div>
+          <div class="warranty-info">
+            <h3>Warranty</h3>
+            <p>
+              All electronic products come with a standard 1-year manufacturer's
+              warranty covering defects in materials and workmanship. Extended
+              warranty options are available at checkout.
+            </p>
+            <p>
+              Please email us <a href="mailto:xyz123@gmail.com">here</a> if any
+              defects come up and you would like to file a claim.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="related-products">
+      <h2>You May Also Like</h2>
+      <div class="product-grid">
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="../../../images/product1/product1.jpg"
+              alt="Wireless Headphones"
+            />
+            <a href="/pages/products/electronics/electronics-product1.html"></a>
+            <div class="product-tag">Sale</div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/electronics/electronics-product1.html"
+                >Wireless Headphones</a
+              >
+            </h3>
+            <div class="product-price">
+              <span class="original-price">$120.00</span>
+              <span class="current-price">$99.99</span>
+              <span class="discount-badge">&nbsp;Save 17%</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="1"
+              data-product-name="Wireless Headphones"
+              data-product-price="$99.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="../../../images/product2/product2.jpg"
+              alt="Smart Watch"
+            />
+            <a href="/pages/products/electronics/electronics-product2.html"></a>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/electronics/electronics-product2.html"
+                >Smart Watch</a
+              >
+            </h3>
+            <div class="product-price">
+              <span class="current-price">$199.99</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="2"
+              data-product-name="Smart Watch"
+              data-product-price="199.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="../../../images/product3/product3.jpg"
+              alt="Bluetooth Speaker"
+            />
+            <a href="/pages/products/electronics/electronics-product3.html"></a>
+            <div class="product-tag">New</div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/electronics/electronics-product3.html"
+                >Bluetooth Speaker</a
+              >
+            </h3>
+            <div class="product-price">
+              <span class="current-price">$79.99</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="3"
+              data-product-name="Bluetooth Speaker"
+              data-product-price="79.99"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="recently-viewed">
+      <!-- Intentional bug: empty section with no content -->
+    </section>
+
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="../../products.html">All Products</a></li>
+            <li><a href="../../categories/categories.html">Categories</a></li>
+            <li><a href="../../deals.html">Deals</a></li>
+            <li><a href="../../new-arrivals.html">New Arrivals</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="../../contact.html">Contact Us</a></li>
+            <li><a href="../../faq.html">FAQ</a></li>
+            <li><a href="../../shipping.html">Shipping & Returns</a></li>
+            <li><a href="../../terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="../../about-us.html">Our Story</a></li>
+            <li><a href="../../blog.html">Blog</a></li>
+            <li><a href="../../careers.html">Careers</a></li>
+            <li><a href="../../partners.html">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="fa fa-facebook-f"></i>Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.twitter.com/"
+                ><i class="fa fa-twitter"></i>Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fa fa-instagram"></i>Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/"
+                ><i class="fa fa-pinterest"></i>Pinterest</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="../../../js/cart.js"></script>
+    <script src="../../../js/main.js"></script>
+    <script src="../../../js/product-detail.js"></script>
+  </body>
+</html>
