@@ -118,6 +118,10 @@
 
     - **_Fix:_** added login pages to the anchor tags for each corresponding social media platform.
 
+  - All product html files on or around line 121 have inconsistent classes for color variation.
+
+    - **_Fix:_** Made all classes for color variation "color-option"
+
 - <ins>CSS Bugs w/ Fixes:</ins>
 
   - responsive.css .newsletter input ruleset for mobile view is causing
