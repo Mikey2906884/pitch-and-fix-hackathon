@@ -71,7 +71,7 @@
   margin-bottom: 0;
 }
 
-.quantity-selector button,
+.quantity-btn,
 .product-details-btn {
   padding: 0.5rem 1rem;
   background-color: #0078d4;
@@ -82,16 +82,32 @@
   transition: all 0.3s ease-in-out;
 }
 
-.quantity-selector input {
-  width: 3rem;
+.quantity-btn:hover,
+.product-details-btn:hover {
+  background-color: #005a9e;
+}
+
+.item-details .quantity-btn {
+  padding: 0.5rem 0.5rem;
+}
+
+#quantity,
+.quantity {
+  width: 2.5rem;
   text-align: center;
   border: 1px solid #ddd;
-  padding: 0.5rem;
+  padding: 0.5rem 0;
   border-radius: 0.5rem;
 }
 
-.quantity-selector input::-webkit-inner-spin-button,
-.quantity-selector input::-webkit-outer-spin-button {
+.quantity {
+  width: 2rem;
+}
+
+#quantity::-webkit-inner-spin-button,
+#quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button,
+.quantity::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }

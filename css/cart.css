@@ -54,7 +54,7 @@
   vertical-align: middle;
 }
 
-.product-info {
+td.product-info {
   display: flex;
   align-items: center;
 }
@@ -226,4 +226,23 @@
 
 .product-slide {
   min-width: 250px;
+}
+
+.item-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  align-items: center;
+}
+
+.remove-item {
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #f44336;
+  color: white;
+  padding: 1rem;
+}
+
+.remove-item:hover {
+  background-color: #ff2306;
 }

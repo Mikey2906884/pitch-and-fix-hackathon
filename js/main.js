@@ -37,7 +37,9 @@ function setupEventListeners() {
       const productName = this.dataset.productName;
       const productPrice = this.dataset.productPrice;
 
-      addToCart(productId, productName, productPrice);
+      addToCart(productId, productName, productPrice, "black", 1);
+      toggleCart();
+      toggleCart();
 
       // Show success message
       showMessage("Product added to cart!", "success");
@@ -57,10 +59,10 @@ function showMessage(message, type) {
   // Add to body
   document.body.appendChild(messageElement);
 
-  // Remove after 3 seconds
+  // Remove after 2 seconds
   setTimeout(() => {
     messageElement.remove();
-  }, 3000);
+  }, 2000);
 }
 
 // Setup newsletter form

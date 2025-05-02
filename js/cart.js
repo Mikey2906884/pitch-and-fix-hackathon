@@ -17,13 +17,23 @@ function saveCart() {
 }
 
 // Add product to cart
-function addToCart(productId, productName, productPrice) {
+function addToCart(
+  productId,
+  productName,
+  productPrice,
+  productColor,
+  productQuantity
+) {
   // Check if product already in cart
   const existingItem = cart.find((item) => item.id === productId);
 
   if (existingItem) {
     // Increase quantity and update total if already in cart
-    existingItem.quantity++;
+    existingItem.quantity += productQuantity;
+    if (existingItem.quantity > 10) {
+      existingItem.quantity = 10;
+    }
+    // Update total price
     existingItem.total = (productPrice * existingItem.quantity).toFixed(2);
   } else {
     // Add new item to cart
@@ -31,7 +41,8 @@ function addToCart(productId, productName, productPrice) {
       id: productId,
       name: productName,
       price: productPrice,
-      quantity: 1,
+      color: productColor,
+      quantity: productQuantity,
       total: productPrice,
     });
   }
@@ -108,10 +119,10 @@ function toggleCart() {
   const cartDropdown = document.querySelector(".cart-dropdown");
   if (cartDropdown) {
     // Toggle display
+    displayCartDropdown();
     if (cartDropdown.style.display === "none") {
       cartDropdown.style.display = "block";
       // Populate cart dropdown
-      displayCartDropdown();
     } else {
       cartDropdown.style.display = "none";
     }
@@ -144,13 +155,57 @@ function displayCartDropdown() {
 
       cartItem.innerHTML = `
                 <div class="item-details">
+                  <div>
                     <h4>${item.name}</h4>
-                    <p>${item.price}</p>
+                    <span>${item.price} x</span>
+                    <button id="${item.id}-decrease" class="quantity-btn">-</button>
+                    <input type="number" id="${item.id}-quantity" class="quantity" value="${item.quantity}" min="1" max="10" />
+                    <button id="${item.id}-increase" class="quantity-btn">+</button>
+                  </div>
+                  <button class="remove-item" data-product-id="${item.id}">X</button>
                 </div>
-                <button class="remove-item" data-product-id="${item.id}">×</button>
+                <br>
+                <hr>
             `;
-
       cartItemsContainer.appendChild(cartItem);
+    });
+
+    cart.forEach((item) => {
+      const quantityInput = document.getElementById(`${item.id}-quantity`);
+      const quantityIncreaseBtn = document.getElementById(
+        `${item.id}-increase`
+      );
+      const quantityDecreaseBtn = document.getElementById(
+        `${item.id}-decrease`
+      );
+
+      // Add event listeners for quantity increase/decrease
+      quantityIncreaseBtn.addEventListener("click", function () {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue < 10) {
+          quantityInput.value = currentValue + 1;
+          let total = 0;
+          updateItemQuantity(item.id, currentValue + 1);
+          cart.forEach((item) => {
+            total += parseFloat(item.price * item.quantity);
+          });
+
+          cartTotalAmount.textContent = total.toFixed(2);
+        }
+      });
+      quantityDecreaseBtn.addEventListener("click", function () {
+        const currentValue = parseInt(quantityInput.value);
+        if (currentValue > 1) {
+          quantityInput.value = currentValue - 1;
+          let total = 0;
+          updateItemQuantity(item.id, currentValue - 1);
+          cart.forEach((item) => {
+            total += parseFloat(item.price * item.quantity);
+          });
+
+          cartTotalAmount.textContent = total.toFixed(2);
+        }
+      });
     });
 
     // Add event listeners to remove buttons
@@ -167,7 +222,7 @@ function displayCartDropdown() {
     // Update total
     let total = 0;
     cart.forEach((item) => {
-      total += parseFloat(item.price);
+      total += parseFloat(item.price * item.quantity);
     });
 
     cartTotalAmount.textContent = total.toFixed(2);
@@ -345,16 +400,11 @@ function setupPromoCode() {
 }
 
 // Setup checkout button
-function setupCheckoutButton() {
-  const checkoutBtn = document.getElementById("checkout-btn");
-
-  if (checkoutBtn) {
-    checkoutBtn.addEventListener("click", function () {
-      // Redirect to checkout page (or show modal)
-      alert("Proceeding to checkout...");
-      // window.location.href = 'checkout.html';
-    });
-  }
+function proceedToCheckout() {
+  showMessage("Proceeding to checkout...", "info");
+  setTimeout(() => {
+    window.location.href = "../../../../pages/cart.html";
+  }, 2000);
 }
 
 // Initialize cart functionality
@@ -364,12 +414,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Update cart UI
   updateCartCount();
-
   // If on cart page, display cart items and setup functionality
   if (document.querySelector(".cart-page-container")) {
     displayCartItems();
     updateCartTotals();
     setupPromoCode();
-    setupCheckoutButton();
   }
 });
