@@ -98,7 +98,12 @@ function setupAddToCart() {
       // Get product details
       const productId = this.dataset.productId;
       const productName = this.dataset.productName;
-      const productPrice = this.dataset.productPrice;
+      let productPrice = this.dataset.productPrice;
+
+      if (productPrice === undefined) {
+        productPrice =
+          this.parentElement.querySelector(".selected").textContent;
+      }
       // Get selected color
       const selectedColor = getSelectedColor();
 

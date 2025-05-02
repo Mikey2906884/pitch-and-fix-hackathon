@@ -37,6 +37,7 @@ function addToCart(
     existingItem.total = (productPrice * existingItem.quantity).toFixed(2);
   } else {
     // Add new item to cart
+
     cart.push({
       id: productId,
       name: productName,
