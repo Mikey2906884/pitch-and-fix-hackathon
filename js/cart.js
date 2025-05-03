@@ -254,26 +254,28 @@ function displayCartItems() {
       const itemTotal = item.price * item.quantity;
 
       cartItem.innerHTML = `
-                <td class="product-info">
-                    <img src="../images/product${item.id}.jpg" alt="${item.name}" class="cart-item-image">
-                    <div class="product-details">
-                        <h3>${item.name}</h3>
-                    </div>
-                </td>
-                <td class="product-price">${item.price}</td>
-                <td class="product-quantity">
-                    <div class="quantity-controls">
-                        <button class="quantity-decrease">-</button>
-                        <input type="number" value="${item.quantity}" max="10" class="quantity-input">
-                        <button class="quantity-increase">+</button>
-                    </div>
-                </td>
-                <td class="product-total" data-total="${itemTotal}">${itemTotal}</td>
-                <td class="product-actions">
-                    <button class="remove-item-btn">
-                        <i class="fas fa-trash-alt"></i>
-                    </button>
-                </td>
+                <tr class="cart-item" data-product-id="${item.id}">
+                  <td class="product-info">
+                      <img src="../images/product${item.id}.jpg" alt="${item.name}" class="cart-item-image">
+                      <div class="product-details">
+                          <h3>${item.name}</h3>
+                      </div>
+                  </td>
+                  <td class="product-price">${item.price}</td>
+                  <td class="product-quantity">
+                      <div class="quantity-controls">
+                          <button class="quantity-decrease">-</button>
+                          <input type="number" value="${item.quantity}" max="10" class="quantity-input">
+                          <button class="quantity-increase">+</button>
+                      </div>
+                  </td>
+                  <td class="product-total" data-total="${itemTotal}">${itemTotal}</td>
+                  <td class="product-actions">
+                      <button class="remove-item-btn">
+                          <i class="fas fa-trash-alt"></i>
+                      </button>
+                  </td>
+                </tr>
             `;
 
       cartItemsList.appendChild(cartItem);
