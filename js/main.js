@@ -9,7 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Setup event listeners
   setupEventListeners();
+
+  initializeHeader();
 });
+
+function initializeHeader() {
+  let prevScrollPos = window.pageYOffset;
+  const header = document.querySelector("header");
+
+  window.onscroll = function () {
+    const currentScrollPos = window.pageYOffset;
+
+    if (prevScrollPos > currentScrollPos) {
+      // Scrolling up
+      header.style.top = "0";
+    } else {
+      // Scrolling down
+      header.style.top = "-10rem";
+      header.querySelector(".cart-dropdown").style.display = "none";
+    }
+    prevScrollPos = currentScrollPos;
+  };
+}
 
 // Initialize site functionality
 function initializeSite() {
@@ -35,9 +56,16 @@ function setupEventListeners() {
       // Get product details
       const productId = this.dataset.productId;
       const productName = this.dataset.productName;
-      const productPrice = this.dataset.productPrice;
+      let productPrice = this.dataset.productPrice;
 
-      addToCart(productId, productName, productPrice);
+      if (productPrice === undefined) {
+        productPrice =
+          this.parentElement.querySelector(".selected").textContent;
+      }
+
+      addToCart(productId, productName, productPrice, "black", 1);
+      toggleCart();
+      toggleCart();
 
       // Show success message
       showMessage("Product added to cart!", "success");
@@ -57,10 +85,10 @@ function showMessage(message, type) {
   // Add to body
   document.body.appendChild(messageElement);
 
-  // Remove after 3 seconds
+  // Remove after 2 seconds
   setTimeout(() => {
     messageElement.remove();
-  }, 3000);
+  }, 2000);
 }
 
 // Setup newsletter form

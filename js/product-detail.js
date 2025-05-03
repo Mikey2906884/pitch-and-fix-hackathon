@@ -73,7 +73,9 @@ function setupQuantityControls() {
   if (increaseBtn && quantityInput) {
     increaseBtn.addEventListener("click", function () {
       let currentValue = parseInt(quantityInput.value);
-      quantityInput.value = currentValue + 1;
+      if (currentValue < 10) {
+        quantityInput.value = currentValue + 1;
+      }
     });
   }
 
@@ -96,19 +98,24 @@ function setupAddToCart() {
       // Get product details
       const productId = this.dataset.productId;
       const productName = this.dataset.productName;
-      const productPrice = this.dataset.productPrice;
+      let productPrice = this.dataset.productPrice;
 
+      if (productPrice === undefined) {
+        productPrice =
+          this.parentElement.querySelector(".selected").textContent;
+      }
       // Get selected color
       const selectedColor = getSelectedColor();
 
       // Get quantity
       const quantity = parseInt(document.getElementById("quantity").value);
 
-      // Add to cart
-      addToCart(productId, productName, productPrice);
+      addToCart(productId, productName, productPrice, selectedColor, quantity);
+      toggleCart();
+      toggleCart();
 
       // Show success message
-      showAddToCartMessage();
+      showMessage("Product added to cart!", "success");
     });
   }
 }

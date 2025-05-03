@@ -57,7 +57,7 @@
   margin-right: 0.5rem;
 }
 
-.selected {
+div.selected {
   border: 2px solid goldenrod;
 }
 
@@ -69,36 +69,6 @@
 
 .quantity-selector h3 {
   margin-bottom: 0;
-}
-
-.quantity-selector button,
-.product-details-btn {
-  padding: 0.5rem 1rem;
-  background-color: #0078d4;
-  color: white;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
-.quantity-selector input {
-  width: 3rem;
-  text-align: center;
-  border: 1px solid #ddd;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-.quantity-selector input::-webkit-inner-spin-button,
-.quantity-selector input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.quantity-selector button:hover,
-.product-details-btn:hover {
-  background-color: #005a9e;
 }
 
 .purchase-actions {
