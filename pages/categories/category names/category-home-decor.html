@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category Home Decor</title>
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <ul id="nav-items">
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/pages/products/products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/categories/categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/about-us.html">About Us</a>
+          </li>
+          <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-container">
+        <div class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" style="display: none">
+          <div class="cart-items">
+            <!-- Cart items will be added here by JavaScript -->
+          </div>
+          <div class="cart-total">
+            <p>Total: $<span id="cart-total-amount">0.00</span></p>
+          </div>
+          <button class="checkout-btn">Checkout</button>
+        </div>
+      </div>
+    </header>
+    <section class="featured-products">
+      <h2>Home Decor Products</h2>
+      <div class="product-grid">
+        <div class="product-card" onclick="">
+          <div class="product-image">
+            <img
+              src="/images/home decor product1/home-decor-product1.jpeg"
+              alt="Touch to Light Lamp"
+            />
+            <a href="/pages/products/home decor/home-decor-product1.html"></a>
+            <div class="product-tag">Sale</div>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/home decor/home-decor-product1.html"
+                >Touch to Light Lamp</a
+              >
+            </h3>
+            <div class="product-price">
+              <span class="original-price">$29.99</span>
+              <span class="sale-price">$22.49</span>
+            </div>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span class="rating-count">(19)</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="h1"
+              data-product-name="Touch to Light Lamp"
+              data-product-price="22.49"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/images/home decor product2/home-decor-product2.jpeg"
+              alt="Custom Wall Art"
+            />
+            <a href="/pages/products/home decor/home-decor-product2.html"></a>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/home decor/home-decor-product2.html"
+                >Custom Wall Art</a
+              >
+            </h3>
+            <div class="product-price">
+              <ul>
+                <li>
+                  <p>
+                    Small <span class="current-price">$</span
+                    ><span class="current-price selected">19.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Medium <span class="current-price">$</span
+                    ><span class="current-price">39.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Large <span class="current-price">$</span
+                    ><span class="current-price">59.99</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star-half"></i>
+              <span class="rating-count">(8)</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="h2"
+              data-product-name="Custom Wall Art"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+        <div class="product-card">
+          <div class="product-image">
+            <img
+              src="/images/home decor product3/home-decor-product3.jpeg"
+              alt="Custom Pillows"
+            />
+            <a href="/pages/products/home decor/home-decor-product3.html"></a>
+          </div>
+          <div class="product-details">
+            <h3 class="product-title">
+              <a href="/pages/products/home decor/home-decor-product3.html"
+                >Custom Pillows</a
+              >
+            </h3>
+            <div class="product-price">
+              <ul>
+                <li>
+                  <p>
+                    Small <span class="current-price">$</span
+                    ><span class="current-price selected">19.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Medium <span class="current-price">$</span
+                    ><span class="current-price">29.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Large <span class="current-price">$</span
+                    ><span class="current-price">39.99</span>
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div class="product-rating">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <span class="rating-count">(6)</span>
+            </div>
+            <button
+              class="add-to-cart-btn"
+              data-product-id="h3"
+              data-product-name="Custom Pillows"
+            >
+              Add to Cart
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-columns">
+        <div class="footer-column">
+          <h3>Shop</h3>
+          <ul>
+            <li><a href="/pages/products/products.html">All Products</a></li>
+            <li><a href="/pages/categories/categories.html">Categories</a></li>
+            <li><a href="/pages/products/deals.html">Deals</a></li>
+            <li>
+              <a href="/pages/products/new-arrivals.html">New Arrivals</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Customer Service</h3>
+          <ul>
+            <li><a href="/pages/footer/contact.html">Contact Us</a></li>
+            <li><a href="/pages/footer/faq.html">FAQ</a></li>
+            <li>
+              <a href="/pages/footer/shipping.html">Shipping & Returns</a>
+            </li>
+            <li><a href="/pages/footer/terms.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="/pages/footer/about-us.html">Our Story</a></li>
+            <li><a href="/pages/footer/blog.html">Blog</a></li>
+            <li><a href="/pages/footer/careers.html">Careers</a></li>
+            <li><a href="/pages/footer/partners.html">Partners</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h3>Follow Us</h3>
+          <ul class="social-links">
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="fa fa-facebook"></i>Facebook</a
+              >
+            </li>
+            <li>
+              <a href="https://www.twitter.com/"
+                ><i class="fa fa-twitter"></i>Twitter</a
+              >
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fa fa-instagram"></i>Instagram</a
+              >
+            </li>
+            <li>
+              <a href="https://www.pinterest.com/"
+                ><i class="fa fa-pinterest"></i>Pinterest</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script src="/js/cart.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
+</html>

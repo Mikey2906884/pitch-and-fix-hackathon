@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ShopEase - Your One-Stop Shop</title>
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/product-detail.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
+      </div>
+      <nav class="main-nav">
+        <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
+          &#x2630;
+        </button>
+        <ul id="nav-items">
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/pages/products/products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/categories/categories.html">Categories</a>
+          </li>
+          <li class="nav-item"><a href="/pages/about-us.html">About Us</a></li>
+          <li class="nav-item"><a href="/pages/contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="cart-container">
+        <div class="cart-icon">
+          <i class="fa fa-shopping-cart"></i>
+          <span class="cart-count">0</span>
+        </div>
+        <div class="cart-dropdown" style="display: none">
+          <div class="cart-items">
+            <!-- Cart items will be added here by JavaScript -->
+          </div>
+          <div class="cart-total">
+            <p>Total: $<span id="cart-total-amount">0.00</span></p>
+          </div>
+          <button class="checkout-btn" onclick="proceedToCheckout()">
+            Checkout
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section
+      class="categories partnerCategory"
+      style="background-color: burlywood"
+    >
+      <div>
+        <h2>Soon to be Partners</h2>
+        <div>
+          <img
+            src="/images/laughing-dragon.png"
+            alt="The Laughing Dragon's Coffee Shop"
+          />
+          <h3>The Laughing Dragon's Coffee Shop</h3>
+        </div>
+        <div>
+          <p>
+            We are so lucky to partner up with The Laughing Dragon. After buying
+            their max level apparel through us, head over to their coffee shop,
+            where you can enjoy the Beholder's Brew of the Day while also
+            role-playing an adventure with friends and strangers. The Laughing
+            Dragon's Coffee Shop is the best place to be for all your
+            caffienated dreams.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="categories partnerCategory" style="background-color: coral">
+      <div>
+        <h2>Current Partners</h2>
+        <div>
+          <img src="" alt="" />
+          <h3></h3>
+        </div>
+        <div>
+          <p></p>
+        </div>
+      </div>
+    </section>
+    <section
+      class="categories partnerCategory"
+      style="background-color: darkgray"
+    >
+      <div>
+        <h2>Rotating Out Partners</h2>
+        <div>
+          <img src="/images/CLOAKbrand-logo.jpeg" alt="CLOAKbrand" />
+          <h3>CLOAKbrand</h3>
+        </div>
+        <div>
+          <p>
+            Leaving us for now is one of our long-time partners, CLOAKbrand. But
+            don't worry, they'll be back! CLOAKbrand isn't just apparel, it's a
+            statement. Their belief is that you are more than just a label. You
+            are the unsung hero, the knight in shining armor, the grand
+            adventurer of lands unseen; deserving only the best of threads to
+            wear. CLOAKbrand is a community forged by one of you, for all of
+            you, because you deserve nothing less.
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

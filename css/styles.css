@@ -527,3 +527,12 @@ footer {
   background-color: #2196f380;
   color: white;
 }
+
+.partnerCategory div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0 15rem;
+}
