@@ -26,7 +26,9 @@ function initializeHeader() {
     } else {
       // Scrolling down
       header.style.top = "-10rem";
-      header.querySelector(".cart-dropdown").style.display = "none";
+      if (header.querySelector(".cart-dropdown")) {
+        header.querySelector(".cart-dropdown").style.display = "none";
+      }
     }
     prevScrollPos = currentScrollPos;
   };

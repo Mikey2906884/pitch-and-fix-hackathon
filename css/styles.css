@@ -316,7 +316,7 @@ header {
   font-size: 1.1rem;
 }
 
-.product-price {
+div.product-price {
   display: flex;
   align-items: center;
   margin-bottom: 0.5rem;
@@ -519,12 +519,12 @@ footer {
 }
 
 .success {
-  background-color: #4caf5080;
+  background-color: #4caf50c0;
   color: white;
 }
 
 .info {
-  background-color: #2196f380;
+  background-color: #2196f3c0;
   color: white;
 }
 

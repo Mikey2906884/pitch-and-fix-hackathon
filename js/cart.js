@@ -251,12 +251,13 @@ function displayCartItems() {
       const cartItem = document.createElement("tr");
       cartItem.className = "cart-item";
       cartItem.dataset.productId = item.id;
-      const itemTotal = item.price * item.quantity;
+      cartItem.dataset.productPrice = item.price;
+      const itemTotal = (item.price * item.quantity).toFixed(2);
 
       cartItem.innerHTML = `
-                <tr class="cart-item" data-product-id="${item.id}">
+                <tr class="cart-item" data-product-id="${item.id}" data-product-price="${item.price}">
                   <td class="product-info">
-                      <img src="../images/product${item.id}.jpg" alt="${item.name}" class="cart-item-image">
+                      <img src="../images/${item.id}/${item.id}.jpeg" alt="${item.name}" class="cart-item-image">
                       <div class="product-details">
                           <h3>${item.name}</h3>
                       </div>
@@ -264,15 +265,15 @@ function displayCartItems() {
                   <td class="product-price">${item.price}</td>
                   <td class="product-quantity">
                       <div class="quantity-controls">
-                          <button class="quantity-decrease">-</button>
-                          <input type="number" value="${item.quantity}" max="10" class="quantity-input">
-                          <button class="quantity-increase">+</button>
+                          <button class="quantity-decrease quantity-btn">-</button>
+                          <input type="number" value="${item.quantity}" max="10" class="quantity">
+                          <button class="quantity-increase quantity-btn">+</button>
                       </div>
                   </td>
                   <td class="product-total" data-total="${itemTotal}">${itemTotal}</td>
                   <td class="product-actions">
-                      <button class="remove-item-btn">
-                          <i class="fas fa-trash-alt"></i>
+                      <button class="remove-item">
+                          <i class="fa fa-trash"></i>
                       </button>
                   </td>
                 </tr>
@@ -294,12 +295,19 @@ function setupCartItemsEventListeners() {
     button.addEventListener("click", function () {
       const quantityInput = this.nextElementSibling;
       const currentValue = parseInt(quantityInput.value);
+      const totalElement = this.closest("tr").querySelector(".product-total");
       if (currentValue > 1) {
         quantityInput.value = currentValue - 1;
 
         // Update quantity in cart
         const productId = this.closest(".cart-item").dataset.productId;
         updateItemQuantity(productId, currentValue - 1);
+
+        // Update total price
+        const itemPrice = this.closest(".cart-item").dataset.productPrice;
+        totalElement.textContent = (
+          parseFloat(itemPrice) * parseFloat(quantityInput.value)
+        ).toFixed(2);
       }
     });
   });
@@ -310,13 +318,19 @@ function setupCartItemsEventListeners() {
     button.addEventListener("click", function () {
       const quantityInput = this.previousElementSibling;
       const currentValue = parseInt(quantityInput.value);
-      const maxValue = parseInt(quantityInput.max);
+      const totalElement = this.closest("tr").querySelector(".product-total");
+      if (currentValue < 10) {
+        quantityInput.value = currentValue + 1;
+        // Update quantity in cart
+        const productId = this.closest(".cart-item").dataset.productId;
+        updateItemQuantity(productId, currentValue + 1);
 
-      quantityInput.value = currentValue + 1;
-
-      // Update quantity in cart
-      const productId = this.closest(".cart-item").dataset.productId;
-      updateItemQuantity(productId, currentValue + 1);
+        // Update total price
+        const itemPrice = this.closest(".cart-item").dataset.productPrice;
+        totalElement.textContent = (
+          parseFloat(itemPrice) * parseFloat(quantityInput.value)
+        ).toFixed(2);
+      }
     });
   });
 
@@ -330,11 +344,15 @@ function setupCartItemsEventListeners() {
   });
 
   // Remove item buttons
-  const removeButtons = document.querySelectorAll(".remove-item-btn");
+  const removeButtons = document.querySelectorAll(".remove-item");
   removeButtons.forEach((button) => {
     button.addEventListener("click", function () {
       const productId = this.closest(".cart-item").dataset.productId;
       removeFromCart(productId);
+      // Refresh cart display
+      displayCartItems();
+      // Show success message
+      showMessage("Item removed from cart", "success");
     });
   });
 }
