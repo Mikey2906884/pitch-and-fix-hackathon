@@ -8,17 +8,39 @@ function loadRecentlyViewedProducts() {
   }
 
   // Add list of recently viewed products to the page
-  const recentlyViewedContainer =
-    document.getElementsByClassName("recently-viewed");
-  if (recentlyViewedContainer) {
+  const recentlyViewedContainer = document.querySelector(".recently-viewed");
+  if (recentlyViewedContainer && recentlyViewedProducts.length > 1) {
     recentlyViewedContainer.innerHTML = `
       <h2>Recently Viewed Products</h2>
-      <div class="product-flex"></div>
+      <div class="product-grid"></div>
   `;
   }
 
   // Loop through recently viewed products and create elements
-  recentlyViewedProducts.forEach((product) => {});
+  const productFlexList = document.querySelector(
+    ".recently-viewed .product-grid"
+  );
+  if (productFlexList) {
+    productFlexList.style.gridTemplateColumns = `repeat(${
+      recentlyViewedProducts.length - 1
+    }, 1fr)`;
+    productFlexList.style.padding = "0 2rem";
+    for (
+      let product = 0;
+      product < recentlyViewedProducts.length - 1;
+      product++
+    ) {
+      let productCard = document.createElement("div");
+      productFlexList.appendChild(productCard);
+      productCard.outerHTML =
+        "<div class='product-card' onclick='addToRecentlyViewed(this)'></div>";
+
+      productCard = document.querySelectorAll(
+        ".recently-viewed .product-grid .product-card"
+      )[product];
+      productCard.innerHTML = recentlyViewedProducts[product];
+    }
+  }
 }
 
 function saveRecentlyViewedProducts() {
@@ -29,19 +51,22 @@ function saveRecentlyViewedProducts() {
 }
 
 function addToRecentlyViewed(div) {
-  // Check if the product is already in the list
-  if (!recentlyViewedProducts.includes(div)) {
-    // Add the product to the list if it is not already there
-    recentlyViewedProducts.push(div);
-
-    // Limit to 5 products
-    if (recentlyViewedProducts.length > 5) {
-      recentlyViewedProducts.shift(); // Remove the oldest product
-    }
-
-    // Save to local storage
-    saveRecentlyViewedProducts();
+  if (recentlyViewedProducts.includes(div.innerHTML)) {
+    const itemIndex = recentlyViewedProducts.findIndex(
+      (product) => product === div.innerHTML
+    );
+    recentlyViewedProducts.splice(itemIndex, 1);
   }
+  // Add the product to the list if it is not already there
+  recentlyViewedProducts.push(div.innerHTML);
+
+  // Limit to 5 products
+  if (recentlyViewedProducts.length > 5) {
+    recentlyViewedProducts.shift(); // Remove the oldest product
+  }
+
+  // Save to local storage
+  saveRecentlyViewedProducts();
 }
 
 document.addEventListener("DOMContentLoaded", function () {

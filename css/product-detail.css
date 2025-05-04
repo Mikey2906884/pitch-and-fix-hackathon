@@ -192,6 +192,10 @@ h2 {
   color: #f39c12;
 }
 
+.product-grid {
+  height: fit-content;
+}
+
 @media (min-width: 967px) {
   .related-products .product-grid {
     grid-template-columns: repeat(3, 1fr);
