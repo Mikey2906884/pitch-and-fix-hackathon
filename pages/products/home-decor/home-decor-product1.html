@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smart Watch</title>
+    <title>Touch to Light Lamp</title>
     <link rel="stylesheet" href="/css/product-detail.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
     <link rel="stylesheet" href="/css/styles.css" />
@@ -20,10 +20,10 @@
         <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
       </div>
       <nav class="main-nav">
+        <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
+          &#x2630;
+        </button>
         <ul id="nav-items">
-          <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
-            &#x2630;
-          </button>
           <li class="nav-item"><a href="/index.html">Home</a></li>
           <li class="nav-item">
             <a href="/pages/products/products.html">Products</a>
@@ -63,111 +63,39 @@
         <div class="main-image">
           <img
             id="main-product-img"
-            sizes=""
-            src="../../../images/electronic-product2/electronic-product2.jpeg"
-            alt="Smart Watch"
-          />
-        </div>
-        <div class="thumbnail-gallery">
-          <img
-            src="../../../images/electronic-product2/electronic-product2.jpeg"
-            alt="Smart Watch - Front"
-            class="thumbnail active"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-side.jpg"
-            alt="Smart Watch - Side"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-back.jpg"
-            alt="Smart Watch - Back"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-case.jpg"
-            alt="Smart Watch - Case"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
+            src="../../../images/home-decor-product1/home-decor-product1.jpeg"
+            alt="Touch to Light Lamp"
           />
         </div>
       </div>
-
       <div class="product-info">
-        <h1 class="product-title">Smart Watch</h1>
+        <h1 class="product-title">Touch to Light Lamp</h1>
         <div class="product-rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
-          <span class="rating-count">(28 reviews)</span>
+          <span class="rating-count">(19 reviews)</span>
         </div>
         <div class="product-price">
-          <span class="sale-price">$199.99</span>
+          <span class="original-price">$29.99</span>
+          <span class="sale-price">$22.49</span>
+          <span class="discount-badge">&nbsp;Save 25%</span>
         </div>
         <div class="product-description">
           <p>
-            Experience the future of wearable technology with our Smart Watch.
-            With a long-lasting battery, advanced tracking capabilities, and a
-            customizable interface, this watch was designed just for you. Our
-            Smart Watch also keeps you connected with your loved ones either
-            through call or text.
+            Experience three levels of brightness with our Touch to Light Lamp.
+            This lamp adds a modern touch to any room with its chic design. This
+            lamp becomes extremely useful when you are trying to read, write, or
+            work long hours into the night.
           </p>
           <ul class="features-list">
-            <li>Touch screen with interactive apps</li>
-            <li>Bluetooth 5.0, Wi-Fi, and Cellular connectivity</li>
-            <li>48-hour battery life</li>
-            <li>Comfortable and detachable wrist band</li>
-            <li>Built-in speakers and microphone for calls</li>
-            <li>Water Resistant Case</li>
-            <li>4-hour charge period</li>
+            <li>Low/Mid/High Brightness Levels</li>
+            <li>Touch-sensitive Base</li>
+            <li>Removable Lamp Shade</li>
+            <li>Portable</li>
           </ul>
-        </div>
-        <div class="product-variants">
-          <div class="color-options">
-            <h3>Color:</h3>
-            <div class="color-selector">
-              <div
-                class="color-option"
-                data-color="black"
-                style="background-color: black"
-              ></div>
-              <div
-                class="color-option"
-                data-color="white"
-                style="background-color: antiquewhite"
-              ></div>
-              <div
-                class="color-option"
-                data-color="blue"
-                style="background-color: blue"
-              ></div>
-              <div
-                class="color-option"
-                data-color="red"
-                style="background-color: red"
-              ></div>
-              <div
-                class="color-option"
-                data-color="green"
-                style="background-color: green"
-              ></div>
-              <div
-                class="color-option"
-                data-color="purple"
-                style="background-color: purple"
-              ></div>
-              <div
-                class="color-option"
-                data-color="pink"
-                style="background-color: deeppink"
-              ></div>
-            </div>
-          </div>
         </div>
         <div class="quantity-selector">
           <h3>Quantity:</h3>
@@ -181,9 +109,9 @@
           <button
             id="add-to-cart"
             class="product-details-btn"
-            data-product-id="electronic-product2"
-            data-product-name="Smart Watch"
-            data-product-price="199.99"
+            data-product-id="home-decor-product1"
+            data-product-name="Touch to Light Lamp"
+            data-product-price="22.49"
           >
             Add to Cart
           </button>
@@ -195,11 +123,11 @@
         </div>
         <div class="product-meta">
           <p class="stock-status in-stock">In Stock</p>
-          <p class="sku">SKU: PL-200-BLK</p>
+          <p class="sku">SKU: LA-022-GRY</p>
           <p class="category-list">
             Categories:
-            <a href="/pages/categories/category-names/category-electronics.html"
-              >Electronics</a
+            <a href="/pages/categories/category-names/category-home-decor.html"
+              >Home Decor</a
             >
           </p>
         </div>
@@ -221,21 +149,16 @@
         <div id="description" class="tab-content active">
           <h2>Product Description</h2>
           <p>
-            Our Smart Watch's polycarbonate band comes in a variety of colors
-            and sizes, all for your comfort and style. If you want to change the
-            color or size of your band, you can! Be the most stylish person in
-            the room with our Smart Watch.
+            Our Touch to Light Lamp is designed for convenience and style. With
+            a simple touch, you can adjust the brightness to your liking, making
+            it perfect for reading, writing, or creating a cozy atmosphere in
+            your home.
           </p>
           <p>
-            The watch itself is of premium quality! It comes with a screen
-            protective case that is water-resistant. Furthermore, with 48 hours
-            of battery life, you can complete daily tasks, whether it be
-            business or personal, without needing to recharge.
-          </p>
-          <p>
-            Our Smart Watch is compatible with iOS devices, starting with ver 13
-            or ver 13 pro. Our Smart Watch is also compatible with Android
-            devices, starting with ver 14.5.
+            The touch-sensitive base is made from high-quality materials. It
+            includes a metal plate with thin insulating coating that is
+            connected to an electronic circuit that detects changes in
+            capacitance when the metal plate is touched.
           </p>
         </div>
         <div id="specifications" class="tab-content">
@@ -243,28 +166,24 @@
           <table class="specs-table">
             <tbody>
               <tr>
-                <th>Interactive Touch Screen Type</th>
-                <td>LCD</td>
+                <th>Dimensions</th>
+                <td>30 inches tall</td>
               </tr>
               <tr>
-                <th>Connectivity</th>
-                <td>Bluetooth 5.0</td>
-                <td>Wi-Fi</td>
-                <td>Cellular</td>
+                <th>Light Source</th>
+                <td>Incandescent bulbs</td>
+                <td>Halogen bulbs</td>
+                <td>LED bulbs</td>
               </tr>
               <tr>
-                <th>Sensors</th>
-                <td>Heart rate</td>
-                <td>GPS</td>
-                <td>Weather</td>
+                <th>Power Source</th>
+                <td>AC Power</td>
               </tr>
               <tr>
-                <th>Battery Life</th>
-                <td>48 hours</td>
-              </tr>
-              <tr>
-                <th>Charging Time</th>
-                <td>4 hours</td>
+                <th>Processing</th>
+                <td>Capacitive Sensing</td>
+                <td>Circuitry</td>
+                <td>Microcontroller</td>
               </tr>
             </tbody>
           </table>
@@ -281,29 +200,29 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <span class="total-reviews">Based on 28 reviews</span>
+              <span class="total-reviews">Based on 19 reviews</span>
             </div>
             <div class="rating-breakdown">
               <div class="rating-bar">
                 <span class="rating-level">5 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 93%"></div>
+                  <div class="progress" style="width: 100%"></div>
                 </div>
-                <span class="rating-percent">93%</span>
+                <span class="rating-percent">100%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">4 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 5%"></div>
+                  <div class="progress" style="width: 0%"></div>
                 </div>
-                <span class="rating-percent">5%</span>
+                <span class="rating-percent">0%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">3 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 2%"></div>
+                  <div class="progress" style="width: 0%"></div>
                 </div>
-                <span class="rating-percent">2%</span>
+                <span class="rating-percent">0%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">2 Star</span>
@@ -324,8 +243,8 @@
           <div class="user-reviews">
             <div class="review">
               <div class="review-header">
-                <div class="reviewer-name">Draven</div>
-                <div class="review-date">January 2, 2025</div>
+                <div class="reviewer-name">Samantha G.</div>
+                <div class="review-date">September 6, 2024</div>
               </div>
               <div class="review-rating">
                 <i class="fa fa-star"></i>
@@ -334,19 +253,21 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <div class="review-title">Comfortable and Stylish!</div>
+              <div class="review-title">Wonderful Lighting</div>
               <div class="review-content">
                 <p>
-                  I love this Smart Watch! I can change the bands out to match
-                  whatever color scheme my outfit is for the day. I can never go
-                  a day without wearing it.
+                  The lighting is perfect for my bedroom. It's compatibility
+                  with different types of bulbs is amazing. And, I love how I
+                  can control the brightness just by touching the base. I can
+                  even remove the lamp shade for three more brightness levels.
+                  Thank you ShopEase.
                 </p>
               </div>
             </div>
             <div class="review">
               <div class="review-header">
-                <div class="reviewer-name">Eric Devslopes</div>
-                <div class="review-date">April 27, 2025</div>
+                <div class="reviewer-name">Jennifer M.</div>
+                <div class="review-date">November 29, 2024</div>
               </div>
               <div class="review-rating">
                 <i class="fa fa-star"></i>
@@ -355,35 +276,34 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <div class="review-title">So Much Better Than A Phone</div>
+              <div class="review-title">Proving My Husband Wrong</div>
               <div class="review-content">
                 <p>
-                  This Smart Watch can do everything my phone can do, but it's
-                  so much cheaper! If you want to save money and stay connected
-                  with others while wasting time meme scrolling, I recommend
-                  this watch. It's a steal at this price!
+                  My husband was skeptical about the lamp and thought I was
+                  crazy for wanting a lamp that you can touch to turn on. But
+                  now, he loves it just as much as I do! It fits perfectly in
+                  our living room and the bedroom.
                 </p>
               </div>
             </div>
             <div class="review">
               <div class="review-header">
-                <div class="reviewer-name">Stu P. Idity</div>
-                <div class="review-date">May 5, 2025</div>
+                <div class="reviewer-name">Henry M.</div>
+                <div class="review-date">November 29, 2024</div>
               </div>
               <div class="review-rating">
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
               </div>
-              <div class="review-title">Water Resistant Case?</div>
+              <div class="review-title">Just Clarifying</div>
               <div class="review-content">
                 <p>
-                  This Smart Watch is perfect. But... I was slightly
-                  disappointed with the water resistant case. I tested this out
-                  by submerging it in water for 30 minutes, and lo and behold,
-                  it didn't resist the water from entering the case at all. I
-                  may need to test this out again to see if it was a fluke.
+                  My wife is under the assumption that I was against this lamp
+                  from the start. I just want to say that I love it, even from
+                  the beginning. Thank you ShopEase for all that you sell.
                 </p>
               </div>
             </div>
@@ -448,86 +368,91 @@
     <section class="related-products">
       <h2>You May Also Like</h2>
       <div class="product-grid">
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
+        <div class="product-card">
           <div class="product-image">
             <img
-              src="../../../images/electronic-product1/electronic-product1.jpeg"
-              alt="Wireless Headphones"
+              src="../../../images/home-decor-product2/home-decor-product2.jpeg"
+              alt="Custom Wall Art"
             />
-            <a href="/pages/products/electronics/electronics-product1.html"></a>
-            <div class="product-tag">Sale</div>
+            <a href="/pages/products/home-decor/home-decor-product2.html"></a>
           </div>
           <div class="product-details">
             <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product1.html"
-                >Wireless Headphones</a
+              <a href="/pages/products/home-decor/home-decor-product2.html"
+                >Custom Wall Art</a
               >
             </h3>
             <div class="product-price">
-              <span class="original-price">$120.00</span>
-              <span class="current-price">$99.99</span>
-              <span class="discount-badge">&nbsp;Save 17%</span>
+              <ul>
+                <li>
+                  <p>
+                    Small <span class="current-price">$</span
+                    ><span class="current-price selected">19.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Medium <span class="current-price">$</span
+                    ><span class="current-price">39.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Large <span class="current-price">$</span
+                    ><span class="current-price">59.99</span>
+                  </p>
+                </li>
+              </ul>
             </div>
             <button
               class="add-to-cart-btn"
-              data-product-id="electronic-product1"
-              data-product-name="Wireless Headphones"
-              data-product-price="$99.99"
+              data-product-id="home-decor-product2"
+              data-product-name="Custom Wall Art"
             >
               Add to Cart
             </button>
           </div>
         </div>
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
+        <div class="product-card">
           <div class="product-image">
             <img
-              src="../../../images/electronic-product3/electronic-product3.jpeg"
-              alt="Bluetooth Speaker"
+              src="../../../images/home-decor-product3/home-decor-product3.jpeg"
+              alt="Custom Pillows"
             />
-            <a href="/pages/products/electronics/electronics-product3.html"></a>
-            <div class="product-tag">New</div>
+            <a href="/pages/products/home-decor/home-decor-product3.html"></a>
           </div>
           <div class="product-details">
             <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product3.html"
-                >Bluetooth Speaker</a
+              <a href="/pages/products/home-decor/home-decor-product3.html"
+                >Custom Pillows</a
               >
             </h3>
             <div class="product-price">
-              <span class="current-price">$79.99</span>
+              <ul>
+                <li>
+                  <p>
+                    Small <span class="current-price">$</span
+                    ><span class="current-price selected">19.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Medium <span class="current-price">$</span
+                    ><span class="current-price">29.99</span>
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    Large <span class="current-price">$</span
+                    ><span class="current-price">39.99</span>
+                  </p>
+                </li>
+              </ul>
             </div>
             <button
               class="add-to-cart-btn"
-              data-product-id="electronic-product3"
-              data-product-name="Bluetooth Speaker"
-              data-product-price="79.99"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
-          <div class="product-image">
-            <img
-              src="../../../images/electronic-product4/electronic-product4.jpeg"
-              alt="Laptop Bag"
-            />
-            <a href="/pages/products/electronics/electronics-product4.html"></a>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product4.html"
-                >Laptop Bag</a
-              >
-            </h3>
-            <div class="product-price">
-              <span class="current-price">$49.99</span>
-            </div>
-            <button
-              class="add-to-cart-btn"
-              data-product-id="electronic-product4"
-              data-product-name="Laptop Bag"
-              data-product-price="49.99"
+              data-product-id="home-decor-product3"
+              data-product-name="Custom Pillows"
             >
               Add to Cart
             </button>
@@ -536,7 +461,10 @@
       </div>
     </section>
 
-    <section class="recently-viewed"></section>
+    <section class="recently-viewed">
+      <h2>Recently Viewed Products</h2>
+      <div class="product-grid"></div>
+    </section>
 
     <footer>
       <div class="footer-columns">
