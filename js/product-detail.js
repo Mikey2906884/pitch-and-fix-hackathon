@@ -1,4 +1,48 @@
 // Product Detail Page Functionality
+let recentlyViewedProducts = [];
+
+function loadRecentlyViewedProducts() {
+  const storedProducts = localStorage.getItem("recentlyViewedProducts");
+  if (storedProducts) {
+    recentlyViewedProducts = JSON.parse(storedProducts);
+  }
+
+  // Add list of recently viewed products to the page
+  const recentlyViewedContainer =
+    document.getElementsByClassName("recently-viewed");
+  if (recentlyViewedContainer) {
+    recentlyViewedContainer.innerHTML = `
+      <h2>Recently Viewed Products</h2>
+      <div class="product-flex"></div>
+  `;
+  }
+
+  // Loop through recently viewed products and create elements
+  recentlyViewedProducts.forEach((product) => {});
+}
+
+function saveRecentlyViewedProducts() {
+  localStorage.setItem(
+    "recentlyViewedProducts",
+    JSON.stringify(recentlyViewedProducts)
+  );
+}
+
+function addToRecentlyViewed(div) {
+  // Check if the product is already in the list
+  if (!recentlyViewedProducts.includes(div)) {
+    // Add the product to the list if it is not already there
+    recentlyViewedProducts.push(div);
+
+    // Limit to 5 products
+    if (recentlyViewedProducts.length > 5) {
+      recentlyViewedProducts.shift(); // Remove the oldest product
+    }
+
+    // Save to local storage
+    saveRecentlyViewedProducts();
+  }
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   // Initialize product detail functionality
@@ -15,6 +59,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Setup color selection
   setupColorSelection();
+
+  // Load recently viewed products
+  loadRecentlyViewedProducts();
 });
 
 // Initialize product detail functionality
