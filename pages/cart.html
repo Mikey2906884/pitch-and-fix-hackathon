@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Shopping Cart - ShopEase</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
-    <link rel="stylesheet" href="../css/cart.css" />
-    <link rel="stylesheet" href="../css/product-detail.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/responsive.css" />
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/product-detail.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -17,22 +17,26 @@
   <body>
     <header>
       <div class="logo-container">
-        <img
-          src="../images/ShopEase-logo.svg"
-          alt="ShopEase Logo"
-          class="logo"
-        />
+        <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
       </div>
       <nav class="main-nav">
         <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
           &#x2630;
         </button>
         <ul id="nav-items">
-          <li class="nav-item"><a href="../index.html">Home</a></li>
-          <li class="nav-item"><a href="products.html">Products</a></li>
-          <li class="nav-item"><a href="categories.html">Categories</a></li>
-          <li class="nav-item"><a href="about.html">About Us</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li class="nav-item"><a href="/index.html">Home</a></li>
+          <li class="nav-item">
+            <a href="/pages/products/products.html">Products</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/categories/categories.html">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/footer/about-us.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a href="/pages/footer/contact.html">Contact</a>
+          </li>
         </ul>
       </nav>
       <div class="cart-container">
@@ -143,7 +147,7 @@
             <button id="checkout-btn" class="checkout-btn">
               Proceed to Checkout
             </button>
-            <a href="products.html" class="continue-shopping"
+            <a href="/pages/products/products.html" class="continue-shopping"
               >Continue Shopping</a
             >
           </div>
@@ -156,7 +160,10 @@
           <div class="product-slide">
             <div class="product-card">
               <div class="product-image">
-                <img src="../images/product2/product2.jpg" alt="Smart Watch" />
+                <img
+                  src="../images/electronic-product2/electronic-product2.jpeg"
+                  alt="Smart Watch"
+                />
               </div>
               <div class="product-details">
                 <h3 class="product-title">Smart Watch</h3>
@@ -165,7 +172,7 @@
                 </div>
                 <button
                   class="add-to-cart-btn"
-                  data-product-id="2"
+                  data-product-id="electronic-product2"
                   data-product-name="Smart Watch"
                   data-product-price="199.99"
                 >
@@ -178,9 +185,10 @@
             <div class="product-card">
               <div class="product-image">
                 <img
-                  src="../images/product3/product3.jpg"
+                  src="../images/electronic-product3/electronic-product3.jpeg"
                   alt="Bluetooth Speaker"
                 />
+                <div class="product-tag">New</div>
               </div>
               <div class="product-details">
                 <h3 class="product-title">Bluetooth Speaker</h3>
@@ -189,7 +197,7 @@
                 </div>
                 <button
                   class="add-to-cart-btn"
-                  data-product-id="3"
+                  data-product-id="electronic-product3"
                   data-product-name="Bluetooth Speaker"
                   data-product-price="79.99"
                 >
@@ -202,13 +210,24 @@
           <div class="product-slide">
             <div class="product-card">
               <div class="product-image">
-                <img src="../images/product4/product4.jpg" alt="Laptop Bag" />
+                <img
+                  src="../images/electronic-product4/electronic-product4.jpeg"
+                  alt="Laptop Bag"
+                />
               </div>
               <div class="product-details">
                 <h3 class="product-title">Laptop Bag</h3>
                 <div class="product-price">
                   <span class="current-price">$49.99</span>
                 </div>
+                <button
+                  class="add-to-cart-btn"
+                  data-product-id="electronic-product4"
+                  data-product-name="Laptop Bag"
+                  data-product-price="49.99"
+                >
+                  Add to Cart
+                </button>
               </div>
             </div>
           </div>
@@ -221,54 +240,66 @@
         <div class="footer-column">
           <h3>Shop</h3>
           <ul>
-            <li><a href="products.html">All Products</a></li>
-            <li><a href="categories.html">Categories</a></li>
-            <li><a href="deals.html">Deals</a></li>
-            <li><a href="new-arrivals.html">New Arrivals</a></li>
+            <li><a href="/pages/products/products.html">All Products</a></li>
+            <li><a href="/pages/categories/categories.html">Categories</a></li>
+            <li><a href="/pages/products/deals.html">Deals</a></li>
+            <li>
+              <a href="/pages/products/new-arrivals.html">New Arrivals</a>
+            </li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Customer Service</h3>
           <ul>
-            <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="shipping.html">Shipping & Returns</a></li>
-            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="/pages/footer/contact.html">Contact Us</a></li>
+            <li><a href="/pages/footer/faq.html">FAQ</a></li>
+            <li>
+              <a href="/pages/footer/shipping.html">Shipping & Returns</a>
+            </li>
+            <li><a href="/pages/footer/terms.html">Terms & Conditions</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>About Us</h3>
           <ul>
-            <li><a href="about.html">Our Story</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="careers.html">Careers</a></li>
-            <li><a href="partners.html">Partners</a></li>
+            <li><a href="/pages/footer/about-us.html">Our Story</a></li>
+            <li><a href="/pages/footer/blog.html">Blog</a></li>
+            <li><a href="/pages/footer/careers.html">Careers</a></li>
+            <li><a href="/pages/footer/partners.html">Partners</a></li>
           </ul>
         </div>
         <div class="footer-column">
           <h3>Follow Us</h3>
           <ul class="social-links">
             <li>
-              <a href="#"><i class="fa fa-facebook-f"></i>Facebook</a>
+              <a href="https://www.facebook.com"
+                ><i class="fa fa-facebook-f"></i>Facebook</a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa fa-twitter"></i>Twitter</a>
+              <a href="https://www.twitter.com"
+                ><i class="fa fa-twitter"></i>Twitter</a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa fa-instagram"></i>Instagram</a>
+              <a href="https://www.instagram.com"
+                ><i class="fa fa-instagram"></i>Instagram</a
+              >
             </li>
             <li>
-              <a href="#"><i class="fa fa-pinterest"></i>Pinterest</a>
+              <a href="https://www.pinterest.com"
+                ><i class="fa fa-pinterest"></i>Pinterest</a
+              >
             </li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 ShopEase. All Rights Reserved.</p>
+        <p>&copy; 2024 ShopEase. All Rights Reserved.</p>
       </div>
     </footer>
 
-    <script src="../js/main.js"></script>
-    <script src="../js/cart.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/cart.js"></script>
   </body>
 </html>
