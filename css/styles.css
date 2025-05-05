@@ -568,7 +568,7 @@ form .contact-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -580,7 +580,7 @@ form .address-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -588,7 +588,7 @@ form .address-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
@@ -624,7 +624,7 @@ form .buttons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 2rem;
   width: 100%;
 }
 
