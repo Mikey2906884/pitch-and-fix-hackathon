@@ -1,7 +1,6 @@
 /* Cart Page Styles */
 
 .cart-page-container {
-  max-width: 1200px;
   margin: 0 auto;
   padding: 2rem;
 }
@@ -199,7 +198,7 @@ td.product-info {
 }
 
 .product-slide {
-  min-width: 250px;
+  min-width: 25%;
 }
 
 .item-details {

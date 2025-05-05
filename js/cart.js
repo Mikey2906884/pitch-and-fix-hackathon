@@ -378,7 +378,12 @@ function updateCartTotals() {
       subtotal += parseFloat(item.price) * item.quantity;
     });
 
-    const shipping = 5.0;
+    let shipping = 0;
+
+    if (cart.length > 0) {
+      shipping = 5.0;
+      shippingElement.textContent = "$5.00";
+    }
 
     // Calculate tax
     const tax = (7 / 100) * subtotal;
@@ -448,4 +453,58 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCartTotals();
     setupPromoCode();
   }
+});
+
+// Auto-scroll functionality
+function autoScroll(containerSelector, speed) {
+  const container = document.querySelector(containerSelector);
+
+  if (container) {
+    // Duplicate the child elements to create an infinite loop effect
+    const children = Array.from(container.children);
+    children.forEach((child) => {
+      const clone = child.cloneNode(true);
+      container.appendChild(clone);
+    });
+
+    let scrollAmount = 0;
+    let autoScrollInterval;
+
+    // Function to start auto-scroll
+    function startAutoScroll() {
+      autoScrollInterval = setInterval(() => {
+        // Increment the scroll position
+        scrollAmount += speed;
+
+        // Check if the scroll has reached the end of the original content
+        if (scrollAmount >= container.scrollWidth / 2) {
+          scrollAmount = 0; // Reset to the start for infinite scrolling
+        }
+
+        container.scrollLeft = scrollAmount;
+      }, 30); // Adjust interval for smoother scrolling
+    }
+
+    // Function to stop auto-scroll
+    function stopAutoScroll() {
+      autoScrollInterval = clearInterval(autoScrollInterval);
+    }
+
+    // Start auto-scroll initially
+    startAutoScroll();
+
+    // Pause auto-scroll on user interaction
+    container.addEventListener("mouseenter", stopAutoScroll); // Pause on mouse enter
+
+    // Resume auto-scroll after a delay when interaction ends
+    container.addEventListener("mouseleave", () => {
+      scrollAmount = container.scrollLeft; // Store current scroll position
+      startAutoScroll();
+    });
+  }
+}
+
+// Initialize auto-scroll on the product slider
+document.addEventListener("DOMContentLoaded", function () {
+  autoScroll(".product-slider", 2); // Adjust speed as needed
 });
