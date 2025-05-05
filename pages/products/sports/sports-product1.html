@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Smart Watch</title>
+    <title>Touch to Light Lamp</title>
     <link rel="stylesheet" href="/css/product-detail.css" />
     <link rel="stylesheet" href="/css/responsive.css" />
     <link rel="stylesheet" href="/css/styles.css" />
@@ -20,10 +20,10 @@
         <img src="/images/ShopEase-logo.svg" alt="ShopEase Logo" class="logo" />
       </div>
       <nav class="main-nav">
+        <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
+          &#x2630;
+        </button>
         <ul id="nav-items">
-          <button id="nav-btn" aria-expanded="false" aria-controls="menu-list">
-            &#x2630;
-          </button>
           <li class="nav-item"><a href="/index.html">Home</a></li>
           <li class="nav-item">
             <a href="/pages/products/products.html">Products</a>
@@ -63,111 +63,36 @@
         <div class="main-image">
           <img
             id="main-product-img"
-            sizes=""
-            src="../../../images/electronic-product2/electronic-product2.jpeg"
-            alt="Smart Watch"
-          />
-        </div>
-        <div class="thumbnail-gallery">
-          <img
-            src="../../../images/electronic-product2/electronic-product2.jpeg"
-            alt="Smart Watch - Front"
-            class="thumbnail active"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-side.jpg"
-            alt="Smart Watch - Side"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-back.jpg"
-            alt="Smart Watch - Back"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
-          />
-          <img
-            src="../../../images/electronic-product2/product2-case.jpg"
-            alt="Smart Watch - Case"
-            class="thumbnail"
-            onclick="changeMainImage(this)"
+            src="../../../images/sports-product1/sports-product1.jpeg"
+            alt="Pickle Ball Kit"
           />
         </div>
       </div>
-
       <div class="product-info">
-        <h1 class="product-title">Smart Watch</h1>
+        <h1 class="product-title">Pickle Ball Kit</h1>
         <div class="product-rating">
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
           <i class="fa fa-star"></i>
-          <span class="rating-count">(28 reviews)</span>
+          <span class="rating-count">(74 reviews)</span>
         </div>
         <div class="product-price">
-          <span class="sale-price">$199.99</span>
+          <span class="current-price">$49.99</span>
         </div>
         <div class="product-description">
           <p>
-            Experience the future of wearable technology with our Smart Watch.
-            With a long-lasting battery, advanced tracking capabilities, and a
-            customizable interface, this watch was designed just for you. Our
-            Smart Watch also keeps you connected with your loved ones either
-            through call or text.
+            This Pickle Ball Kit provides hours of entertainment for you and
+            your friends. It includes the net, three balls, and four paddles.
+            The only thing you and your friends need to look for is an area to
+            play in.
           </p>
           <ul class="features-list">
-            <li>Touch screen with interactive apps</li>
-            <li>Bluetooth 5.0, Wi-Fi, and Cellular connectivity</li>
-            <li>48-hour battery life</li>
-            <li>Comfortable and detachable wrist band</li>
-            <li>Built-in speakers and microphone for calls</li>
-            <li>Water Resistant Case</li>
-            <li>4-hour charge period</li>
+            <li>Net</li>
+            <li>Pickle Ball Balls</li>
+            <li>Pickle Ball Paddles</li>
           </ul>
-        </div>
-        <div class="product-variants">
-          <div class="color-options">
-            <h3>Color:</h3>
-            <div class="color-selector">
-              <div
-                class="color-option"
-                data-color="black"
-                style="background-color: black"
-              ></div>
-              <div
-                class="color-option"
-                data-color="white"
-                style="background-color: antiquewhite"
-              ></div>
-              <div
-                class="color-option"
-                data-color="blue"
-                style="background-color: blue"
-              ></div>
-              <div
-                class="color-option"
-                data-color="red"
-                style="background-color: red"
-              ></div>
-              <div
-                class="color-option"
-                data-color="green"
-                style="background-color: green"
-              ></div>
-              <div
-                class="color-option"
-                data-color="purple"
-                style="background-color: purple"
-              ></div>
-              <div
-                class="color-option"
-                data-color="pink"
-                style="background-color: deeppink"
-              ></div>
-            </div>
-          </div>
         </div>
         <div class="quantity-selector">
           <h3>Quantity:</h3>
@@ -181,9 +106,9 @@
           <button
             id="add-to-cart"
             class="product-details-btn"
-            data-product-id="electronic-product2"
-            data-product-name="Smart Watch"
-            data-product-price="199.99"
+            data-product-id="sports-product1"
+            data-product-name="Pickle Ball Kit"
+            data-product-price="49.99"
           >
             Add to Cart
           </button>
@@ -195,11 +120,11 @@
         </div>
         <div class="product-meta">
           <p class="stock-status in-stock">In Stock</p>
-          <p class="sku">SKU: PL-200-BLK</p>
+          <p class="sku">SKU: BL-050-PKL</p>
           <p class="category-list">
             Categories:
-            <a href="/pages/categories/category-names/category-electronics.html"
-              >Electronics</a
+            <a href="/pages/categories/category-names/category-sports.html"
+              >Sports</a
             >
           </p>
         </div>
@@ -221,21 +146,18 @@
         <div id="description" class="tab-content active">
           <h2>Product Description</h2>
           <p>
-            Our Smart Watch's polycarbonate band comes in a variety of colors
-            and sizes, all for your comfort and style. If you want to change the
-            color or size of your band, you can! Be the most stylish person in
-            the room with our Smart Watch.
+            The Pickle Ball Kit will give plenty of hours of fun. Pickle Ball is
+            like a mixture of tennis rules/gameplay, ping-pong paddles, and
+            wiffle ball balls. The love for this fairly new sport grows daily.
+            Now you can add to it.
           </p>
           <p>
-            The watch itself is of premium quality! It comes with a screen
-            protective case that is water-resistant. Furthermore, with 48 hours
-            of battery life, you can complete daily tasks, whether it be
-            business or personal, without needing to recharge.
-          </p>
-          <p>
-            Our Smart Watch is compatible with iOS devices, starting with ver 13
-            or ver 13 pro. Our Smart Watch is also compatible with Android
-            devices, starting with ver 14.5.
+            The net used in this kit is made from a nylon mixture. This means it
+            is meant to last for years without wear and tear. The balls are made
+            of premium-quality hard plastic and the paddles are made with a
+            mixture of graphite, fiberglass, carbon fiber, and wood. These
+            materials help generate a certain amount of power with control when
+            swinging them.
           </p>
         </div>
         <div id="specifications" class="tab-content">
@@ -243,28 +165,19 @@
           <table class="specs-table">
             <tbody>
               <tr>
-                <th>Interactive Touch Screen Type</th>
-                <td>LCD</td>
+                <th>Net</th>
+                <td>Nylon Mixture Threading</td>
               </tr>
               <tr>
-                <th>Connectivity</th>
-                <td>Bluetooth 5.0</td>
-                <td>Wi-Fi</td>
-                <td>Cellular</td>
+                <th>Paddles</th>
+                <td>Graphite</td>
+                <td>Fiberglass</td>
+                <td>Carbon Fiber</td>
+                <td>Wood</td>
               </tr>
               <tr>
-                <th>Sensors</th>
-                <td>Heart rate</td>
-                <td>GPS</td>
-                <td>Weather</td>
-              </tr>
-              <tr>
-                <th>Battery Life</th>
-                <td>48 hours</td>
-              </tr>
-              <tr>
-                <th>Charging Time</th>
-                <td>4 hours</td>
+                <th>Ball</th>
+                <td>Polyethelyne</td>
               </tr>
             </tbody>
           </table>
@@ -281,50 +194,74 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <span class="total-reviews">Based on 28 reviews</span>
+              <span class="total-reviews">Based on 74 reviews</span>
             </div>
             <div class="rating-breakdown">
               <div class="rating-bar">
                 <span class="rating-level">5 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 93%"></div>
+                  <div class="progress" style="width: 72%"></div>
                 </div>
-                <span class="rating-percent">93%</span>
+                <span class="rating-percent">72%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">4 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 5%"></div>
+                  <div class="progress" style="width: 20%"></div>
                 </div>
-                <span class="rating-percent">5%</span>
+                <span class="rating-percent">20%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">3 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 2%"></div>
+                  <div class="progress" style="width: 6%"></div>
                 </div>
-                <span class="rating-percent">2%</span>
+                <span class="rating-percent">6%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">2 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 0%"></div>
+                  <div class="progress" style="width: 1%"></div>
                 </div>
-                <span class="rating-percent">0%</span>
+                <span class="rating-percent">1%</span>
               </div>
               <div class="rating-bar">
                 <span class="rating-level">1 Star</span>
                 <div class="progress-bar">
-                  <div class="progress" style="width: 0%"></div>
+                  <div class="progress" style="width: 1%"></div>
                 </div>
-                <span class="rating-percent">0%</span>
+                <span class="rating-percent">1%</span>
               </div>
             </div>
           </div>
           <div class="user-reviews">
             <div class="review">
               <div class="review-header">
-                <div class="reviewer-name">Draven</div>
+                <div class="reviewer-name">Grant W.</div>
+                <div class="review-date">May 23, 2024</div>
+              </div>
+              <div class="review-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+              </div>
+              <div class="review-title">Best Birthday Gift</div>
+              <div class="review-content">
+                <p>
+                  My friends and I fell in love with Pickle Ball ever since it
+                  was created, but none of us have ever owned the equipment to
+                  play at home. We would always have to meet up at the local
+                  YMCA to play this game. My parents got me this kit for my
+                  birthday, and let me tell you, it's been used every day since
+                  I opened it.
+                </p>
+              </div>
+            </div>
+            <div class="review">
+              <div class="review-header">
+                <div class="reviewer-name">Shane D.</div>
                 <div class="review-date">January 2, 2025</div>
               </div>
               <div class="review-rating">
@@ -334,56 +271,39 @@
                 <i class="fa fa-star"></i>
                 <i class="fa fa-star"></i>
               </div>
-              <div class="review-title">Comfortable and Stylish!</div>
+              <div class="review-title">Definitely Top Quality Balls</div>
               <div class="review-content">
                 <p>
-                  I love this Smart Watch! I can change the bands out to match
-                  whatever color scheme my outfit is for the day. I can never go
-                  a day without wearing it.
+                  The makers of these balls weren't kidding about the quality of
+                  their pickle ball balls. When I decided to mess with my
+                  stepmom and hit these balls at her back, I figured they would
+                  break easily or spiral out of control in the air after I hit
+                  them. Boy, was I wrong. They pinged off her back with a
+                  clear-cut thud. I know I'll be playing this game with a few
+                  buddies of mine from now on. That is if I get ungrounded
+                  though...
                 </p>
               </div>
             </div>
             <div class="review">
               <div class="review-header">
-                <div class="reviewer-name">Eric Devslopes</div>
-                <div class="review-date">April 27, 2025</div>
+                <div class="reviewer-name">Karen D.</div>
+                <div class="review-date">January 2, 2025</div>
               </div>
               <div class="review-rating">
                 <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
               </div>
-              <div class="review-title">So Much Better Than A Phone</div>
+              <div class="review-title">These Balls Are Dangerous</div>
               <div class="review-content">
                 <p>
-                  This Smart Watch can do everything my phone can do, but it's
-                  so much cheaper! If you want to save money and stay connected
-                  with others while wasting time meme scrolling, I recommend
-                  this watch. It's a steal at this price!
-                </p>
-              </div>
-            </div>
-            <div class="review">
-              <div class="review-header">
-                <div class="reviewer-name">Stu P. Idity</div>
-                <div class="review-date">May 5, 2025</div>
-              </div>
-              <div class="review-rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-              <div class="review-title">Water Resistant Case?</div>
-              <div class="review-content">
-                <p>
-                  This Smart Watch is perfect. But... I was slightly
-                  disappointed with the water resistant case. I tested this out
-                  by submerging it in water for 30 minutes, and lo and behold,
-                  it didn't resist the water from entering the case at all. I
-                  may need to test this out again to see if it was a fluke.
+                  I'd leave zero stars if I could... my stepson recently bought
+                  this kit to play with his friends. I guess I should've known
+                  this product would contain weapons of mass destruction! I can
+                  still feel the sharp sting in my back from when it was hit by
+                  one of your balls. My monster of a stepson is now grounded and
+                  your manager will soon be getting an email from me about
+                  changing the materials used for these balls. I await their
+                  response.
                 </p>
               </div>
             </div>
@@ -448,86 +368,27 @@
     <section class="related-products">
       <h2>You May Also Like</h2>
       <div class="product-grid">
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
+        <div class="product-card">
           <div class="product-image">
             <img
-              src="../../../images/electronic-product1/electronic-product1.jpeg"
-              alt="Wireless Headphones"
+              src="../../../images/sports-product2/sports-product2.jpeg"
+              alt="Gaga-Ball Pit Walls"
             />
-            <a href="/pages/products/electronics/electronics-product1.html"></a>
-            <div class="product-tag">Sale</div>
+            <a href="/pages/products/sports/sports-product2.html"></a>
           </div>
           <div class="product-details">
             <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product1.html"
-                >Wireless Headphones</a
+              <a href="/pages/products/sports/sports-product2.html"
+                >Gaga-Ball Pit Walls</a
               >
             </h3>
             <div class="product-price">
-              <span class="original-price">$120.00</span>
-              <span class="current-price">$99.99</span>
-              <span class="discount-badge">&nbsp;Save 17%</span>
+              <span class="current-price">$999.99</span>
             </div>
             <button
               class="add-to-cart-btn"
-              data-product-id="electronic-product1"
-              data-product-name="Wireless Headphones"
-              data-product-price="$99.99"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
-          <div class="product-image">
-            <img
-              src="../../../images/electronic-product3/electronic-product3.jpeg"
-              alt="Bluetooth Speaker"
-            />
-            <a href="/pages/products/electronics/electronics-product3.html"></a>
-            <div class="product-tag">New</div>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product3.html"
-                >Bluetooth Speaker</a
-              >
-            </h3>
-            <div class="product-price">
-              <span class="current-price">$79.99</span>
-            </div>
-            <button
-              class="add-to-cart-btn"
-              data-product-id="electronic-product3"
-              data-product-name="Bluetooth Speaker"
-              data-product-price="79.99"
-            >
-              Add to Cart
-            </button>
-          </div>
-        </div>
-        <div class="product-card" onclick="addToRecentlyViewed(this)">
-          <div class="product-image">
-            <img
-              src="../../../images/electronic-product4/electronic-product4.jpeg"
-              alt="Laptop Bag"
-            />
-            <a href="/pages/products/electronics/electronics-product4.html"></a>
-          </div>
-          <div class="product-details">
-            <h3 class="product-title">
-              <a href="/pages/products/electronics/electronics-product4.html"
-                >Laptop Bag</a
-              >
-            </h3>
-            <div class="product-price">
-              <span class="current-price">$49.99</span>
-            </div>
-            <button
-              class="add-to-cart-btn"
-              data-product-id="electronic-product4"
-              data-product-name="Laptop Bag"
-              data-product-price="49.99"
+              data-product-id="sports-product2"
+              data-product-name="Gaga-Ball Pit Walls"
             >
               Add to Cart
             </button>
@@ -536,7 +397,10 @@
       </div>
     </section>
 
-    <section class="recently-viewed"></section>
+    <section class="recently-viewed">
+      <h2>Recently Viewed Products</h2>
+      <div class="product-grid"></div>
+    </section>
 
     <footer>
       <div class="footer-columns">
@@ -602,8 +466,8 @@
       </div>
     </footer>
 
-    <script src="../../../js/product-detail.js"></script>
     <script src="../../../js/cart.js"></script>
     <script src="../../../js/main.js"></script>
+    <script src="../../../js/product-detail.js"></script>
   </body>
 </html>
